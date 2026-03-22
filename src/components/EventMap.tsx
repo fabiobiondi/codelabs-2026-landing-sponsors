@@ -186,7 +186,9 @@ export function EventMap() {
           <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
             Scopri dove si è già svolto l&apos;evento e dove vorremmo portarlo
             prossimamente. <br />
-            Aiutaci a raggiungere più persone e diventa sponsor!
+            <span className="font-bold">
+              Aiutaci a raggiungere più persone e diventa sponsor!
+            </span>
           </p>
         </div>
 
