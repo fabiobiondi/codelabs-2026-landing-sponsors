@@ -33,6 +33,7 @@ const futureEvents: EventLocation[] = [
   { name: 'Bari', lat: 41.1171, lng: 16.8719 },
   { name: 'Palermo', lat: 38.1157, lng: 13.3615 },
   { name: 'Caglari', lat: 38.1157, lng: 13.3615 },
+  { name: 'Lecce', lat: 40.3516, lng: 18.175 },
 ]
 
 function MapInner() {
