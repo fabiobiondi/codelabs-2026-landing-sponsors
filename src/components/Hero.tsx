@@ -119,15 +119,17 @@ export function Hero() {
                   <span className="font-bold">Gemini CLI</span>
                 </li>
                 <li className="list-disc">
-                  Inizierai a creare le prime piccole bold{' '}
+                  Inizierai a creare le prime semplici{' '}
                   <span className="font-bold">
-                    applicazioni"intelligenti" in JavaScript con Gemini
+                    applicazioni"intelligenti" in TypeScript / NodeJS{' '}
                   </span>
+                  che integrano funzionalità AI con le API di Gemini
                 </li>
                 <li className="list-disc">
                   Utilizzerai NodeJS per{' '}
                   <span className="font-bold">
-                    creare delle API REST che integrano funzionalità AI
+                    creare delle API REST in NodeJS che integrano funzionalità
+                    AI con Gemini SDK
                   </span>
                 </li>
                 <li className="list-disc">
