@@ -15,7 +15,7 @@ export function Hero() {
           {/* <Image src={logo} alt="AI Playground Conference Logo" width={1000} height={1000} /> */}
           <h1 className="text-5xl font-bold">Google CodeLabs</h1>
           <h1 className="text-3xl">
-            Agentic Apps with Google Gemini SDK e JavaScript
+            Agentic Apps con Google Gemini SDK e TypeScript
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
             <p>
