@@ -66,7 +66,7 @@ export function Hero() {
                 intelligenti.
               </span>
             </p>
-            <p>
+            <div>
               <span className="pt-6 text-2xl">
                 Argomenti della Masterclass:
               </span>{' '}
@@ -94,7 +94,7 @@ export function Hero() {
                   server di terze parti e la creazione di un MCP server
                 </li>
               </ul>
-            </p>
+            </div>
             <div className="rounded-3xl border p-3 shadow-xl">
               Durante le sessioni utilizzeremo sia{' '}
               <span className="font-bold"> Gemini CLI</span> che{' '}
@@ -108,7 +108,7 @@ export function Hero() {
             <h1 className="pt-6 text-4xl">
               Pomeriggio: <span className="font-bold">Workshop</span>
             </h1>
-            <p>
+            <div>
               <span className="font-bold">
                 Nel pomeriggio avrai la possibilità di mettere in pratica quanto
                 appreso durante la masterclass:
@@ -137,7 +137,7 @@ export function Hero() {
                   <span className="font-bold">Google Cloud</span>.
                 </li>
               </ul>
-            </p>
+            </div>
 
             <p className="font-bold">
               Ogni partecipante riceverà un credito Google Cloud di 5 euro per

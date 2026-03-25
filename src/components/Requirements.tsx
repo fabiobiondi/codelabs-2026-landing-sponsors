@@ -74,12 +74,14 @@ export function Requirements() {
             <div className="text-5xl">💰</div>
             <div>
               <h3 className="font-display text-2xl font-bold tracking-tight text-blue-900">
-                Budget minimo: 2.000 €
+                {/* Budget minimo: 2.000 € */}
+                Vuoi supportarci come sponsor?
               </h3>
               <p className="mt-2 text-base leading-7 tracking-tight text-slate-700">
-                Per coprire i costi di trasferta dello speaker, gadget per i
-                partecipanti e una minima retribuzione per la preparazione e la
-                conduzione del Codelab.
+                Tu, come sponsor, avrai il tuo spazio e a noi serve un po' di
+                budget per coprire i costi di trasferta, gadget per i
+                partecipanti, organizzare challenge a premi e una minima
+                retribuzione per la preparazione e la conduzione del Codelab.
               </p>
             </div>
           </div>
