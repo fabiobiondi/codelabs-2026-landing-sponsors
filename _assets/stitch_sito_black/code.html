@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CodeLabs | Agentic Apps with Gemini &amp; TypeScript</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#ffabf3",
+                        "secondary-fixed": "#ebddff",
+                        "tertiary": "#c3c0ff",
+                        "outline-variant": "#564052",
+                        "surface-dim": "#131313",
+                        "on-surface-variant": "#dcbed4",
+                        "surface-container-low": "#1b1b1b",
+                        "on-secondary-fixed-variant": "#5b00c5",
+                        "surface-bright": "#393939",
+                        "inverse-surface": "#e2e2e2",
+                        "primary-fixed": "#ffd7f5",
+                        "secondary-container": "#5d03ca",
+                        "on-secondary-fixed": "#250059",
+                        "on-secondary": "#3f008d",
+                        "on-background": "#e2e2e2",
+                        "surface": "#131313",
+                        "surface-container-highest": "#353535",
+                        "surface-tint": "#ffabf3",
+                        "on-primary": "#5b005b",
+                        "on-tertiary-container": "#190095",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-container": "#510051",
+                        "on-tertiary": "#1d00a5",
+                        "error": "#ffb4ab",
+                        "inverse-primary": "#a900a9",
+                        "on-surface": "#e2e2e2",
+                        "tertiary-fixed": "#e2dfff",
+                        "on-tertiary-fixed": "#0f0069",
+                        "primary-container": "#ff00ff",
+                        "on-primary-fixed-variant": "#810081",
+                        "primary": "#ffabf3",
+                        "error-container": "#93000a",
+                        "surface-container": "#1f1f1f",
+                        "tertiary-fixed-dim": "#c3c0ff",
+                        "surface-variant": "#353535",
+                        "secondary": "#d3bbff",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#303030",
+                        "on-tertiary-fixed-variant": "#3323cc",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-fixed-dim": "#d3bbff",
+                        "outline": "#a4899d",
+                        "background": "#131313",
+                        "on-primary-fixed": "#380038",
+                        "on-secondary-container": "#c7aaff",
+                        "tertiary-container": "#8683ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #000000; color: #FFFFFF; font-family: 'Inter', sans-serif; }
+        .neon-glow { text-shadow: 0 0 15px rgba(255, 0, 255, 0.4); }
+        .glass-panel { background: rgba(31, 31, 31, 0.4); backdrop-filter: blur(24px); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-xl bg-gradient-to-b from-[#1b1b1b] to-transparent shadow-[0_0_30px_rgba(255,0,255,0.1)]">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-white font-['Space_Grotesk']">
+                CodeLabs
+            </div>
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] tracking-tight">
+<a class="text-[#FF00FF] font-bold border-b-2 border-[#FF00FF] pb-1" href="#">Masterclass</a>
+<a class="text-white/70 hover:text-white transition-colors" href="#">Workshop</a>
+<a class="text-white/70 hover:text-white transition-colors" href="#">Technology</a>
+<a class="text-white/70 hover:text-white transition-colors" href="#">Language</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block text-white/40 hover:text-[#c3c0ff] transition-colors text-sm font-['Inter'] tracking-wide">Contact Us</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-bold hover:bg-[#FF00FF]/10 hover:text-white border border-transparent hover:border-[#FF00FF] transition-all duration-300 active:scale-95">Sponsor Now</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden bg-black">
+<div class="absolute inset-0 z-0 opacity-30 pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#FF00FF] rounded-full blur-[160px] animate-pulse"></div>
+<div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#5d03ca] rounded-full blur-[200px]"></div>
+</div>
+<div class="relative z-10 max-w-[1440px] mx-auto px-12 grid lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high border border-outline-variant/20 rounded-sm">
+<span class="w-2 h-2 bg-primary-container rounded-full animate-ping"></span>
+<span class="text-[10px] uppercase tracking-[0.2em] font-bold text-primary">Live Learning Experience</span>
+</div>
+<h1 class="font-headline text-7xl md:text-8xl font-black tracking-tighter leading-[0.9] text-white">
+                        Build <span class="text-primary-container neon-glow">Agentic</span> Apps.
+                    </h1>
+<p class="text-xl md:text-2xl text-white/60 max-w-xl font-light leading-relaxed">
+                        Master the future of automation with <span class="text-white font-semibold">Gemini 3</span> SDK and <span class="text-[#3178C6] font-semibold">TypeScript</span> on <span class="text-white font-semibold">Google Cloud</span>.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6 pt-4">
+<button class="bg-primary-container text-on-primary-container px-10 py-5 text-lg font-black tracking-tight hover:shadow-[0_0_40px_rgba(255,0,255,0.4)] transition-all">Sponsor now</button>
+<button class="border border-white/20 hover:border-white px-10 py-5 text-lg font-bold tracking-tight bg-white/5 backdrop-blur-sm transition-all">Learn more</button>
+</div>
+<div class="flex items-center gap-6 pt-12 border-t border-white/10">
+<div>
+<p class="text-[10px] uppercase tracking-widest text-white/40 mb-1">Upcoming Tour</p>
+<p class="font-headline font-bold text-white italic">MILAN • ROME • VENICE</p>
+</div>
+</div>
+</div>
+<div class="hidden lg:block relative">
+<div class="aspect-square bg-surface-container-lowest border border-white/5 rounded-lg overflow-hidden p-8 shadow-2xl">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary-container to-transparent opacity-50"></div>
+<div class="font-mono text-xs text-white/20 space-y-2">
+<p class="text-primary-container/60">// Initializing Gemini Agent...</p>
+<p>const agent = new GeminiAgent({</p>
+<p class="pl-4">model: "gemini-1.5-pro",</p>
+<p class="pl-4">tools: [new TypeScriptRuntime()],</p>
+<p class="pl-4 text-white/40">cloud: "google-cloud-vertex-ai"</p>
+<p>});</p>
+<p class="pt-4 text-primary-container/60">// Output log:</p>
+<p class="text-white/60">Agent status: <span class="text-green-400">ACTIVE</span></p>
+<p class="text-white/60">Reasoning level: <span class="text-primary">ULTRA</span></p>
+</div>
+<div class="mt-12">
+<div class="h-64 bg-surface-container-high border border-outline-variant/30 relative flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover grayscale brightness-50 contrast-125" data-alt="Futuristic digital neural network representation with fuchsia glowing nodes and technical data overlays on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs7CPmjkSGBkCtVZanVzgO4bbbosVtxT0xLjW-WliT27E3vFsuwzogCCgXnmSNZGjiJ08dY42iwXj0ol-_7UZmdfgdpi-m06Q7ZtMynQanN0DSnSghvtrxSScD7j5mAbFN3spP4kOjtoTbKJuzmK-CDlI47sWA5PdSZoIL2jQ8uoVHMlC4J03NoaSwiRCEIW-ibdD33_gAAcRT_CNjwiIny5LjeMduzeumm6C6Pm3JGpOUPrup_BfCSCwGsPR1zz-GbR1h6_MQsZ8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Event Details -->
+<section class="py-32 bg-[#0e0e0e]">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div>
+<h2 class="font-headline text-5xl font-bold tracking-tight mb-4 uppercase">The Core Tracks</h2>
+<div class="h-1 w-24 bg-primary-container"></div>
+</div>
+<p class="text-white/40 font-mono text-sm uppercase tracking-tighter">Event_Structure_v.01</p>
+</div>
+<div class="grid md:grid-cols-2 gap-px bg-white/5 border border-white/5 overflow-hidden">
+<!-- Masterclass -->
+<div class="bg-black p-12 group hover:bg-surface-container-low transition-all duration-500">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-primary-container text-5xl font-light">school</span>
+<span class="text-xs font-mono text-white/30 px-3 py-1 border border-white/10">09:00 - 13:00</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-6">Morning Masterclass</h3>
+<p class="text-white/60 leading-relaxed mb-8">
+                            A deep dive into the theoretical foundations of Large Language Models and Agentic workflows. Understanding the Gemini ecosystem architecture and TypeScript integration strategies.
+                        </p>
+<ul class="space-y-4 font-label text-sm text-white/80">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary-container"></span> Gemini API Architecture</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary-container"></span> Reasoning &amp; Tools</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary-container"></span> Production Monitoring</li>
+</ul>
+</div>
+<!-- Workshop -->
+<div class="bg-black p-12 group hover:bg-surface-container-low transition-all duration-500">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-primary-container text-5xl font-light">terminal</span>
+<span class="text-xs font-mono text-white/30 px-3 py-1 border border-white/10">14:00 - 18:00</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-6">Afternoon Workshop</h3>
+<p class="text-white/60 leading-relaxed mb-8">
+                            Hands-on implementation. We will build a production-ready autonomous agent from scratch using the Gemini SDK, TypeScript, and Google Cloud Vertex AI.
+                        </p>
+<ul class="space-y-4 font-label text-sm text-white/80">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary-container"></span> Environment Scaffolding</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary-container"></span> Real-time Agentic Logic</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary-container"></span> Cloud Deployment Pipeline</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Speaker -->
+<section class="py-32 relative overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-12 flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/3 relative group">
+<div class="absolute -inset-4 bg-primary-container opacity-10 blur-xl group-hover:opacity-20 transition-opacity"></div>
+<img alt="Fabio Biondi" class="relative z-10 w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-0 transition-all duration-700 border border-white/10" data-alt="Professional portrait of a male tech lead with a clean modern look, wearing a dark shirt, neutral background, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc8NjfGe0kqBkdC7J1zfst0i70WmSh5cvTVeBa4RtE6LUCO4qmjmqW2JG1-t47T_1hYooppM-BqV1M4_OnPd9Yii5WrnrvCKcmVviBOWN-W5cfCiF6T0An4ojXVOM9mEtjBWrwAWc90H7Y0yfXS1uCKfEMAgH011A3kTWb1iGKj80OgfltNlFi3AHVNEtDbu8WXyrl3fl_ABbWNpdHeMvngpaASi5zw3Z9dy_yd1qJxb1pUCAWMU_ov96DbcdJ_IWyY7tt_BhDoL8"/>
+<div class="absolute bottom-4 left-4 z-20 bg-primary-container px-4 py-1">
+<span class="text-black font-black italic tracking-tighter">LEAD INSTRUCTOR</span>
+</div>
+</div>
+<div class="w-full md:w-2/3">
+<h2 class="font-headline text-5xl font-black tracking-tight mb-8">Fabio Biondi</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<p class="text-lg text-white/70 leading-relaxed">
+                            Google Developer Expert in Web Technologies and a leading voice in the Italian TypeScript community. Fabio has spent over two decades crafting high-performance enterprise applications and teaching thousands of developers.
+                        </p>
+<p class="text-lg text-white/70 leading-relaxed">
+                            Currently focused on the intersection of AI and modern frontend architectures, he brings a practical, industry-first approach to the Gemini SDK ecosystem.
+                        </p>
+</div>
+<div class="mt-12 flex gap-4">
+<a class="p-3 border border-white/10 hover:border-primary-container hover:text-primary-container transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="p-3 border border-white/10 hover:border-primary-container hover:text-primary-container transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Maps/Locations -->
+<section class="py-32 bg-surface-container-lowest">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="grid lg:grid-cols-3 gap-16 items-center">
+<div class="lg:col-span-1">
+<h2 class="font-headline text-4xl font-bold tracking-tight mb-6">Italy Tour 2024</h2>
+<p class="text-white/50 mb-10">We are bringing the CodeLabs experience to the major tech hubs across Italy. Join us in your local city.</p>
+<div class="space-y-4">
+<div class="p-6 border-l-4 border-primary-container bg-surface-container-low flex justify-between items-center">
+<div>
+<h4 class="font-bold">Milan</h4>
+<p class="text-xs text-white/40">Nov 12, 2024</p>
+</div>
+<span class="material-symbols-outlined text-primary-container">arrow_forward</span>
+</div>
+<div class="p-6 border-l-4 border-white/10 hover:border-primary-container transition-colors flex justify-between items-center">
+<div>
+<h4 class="font-bold">Rome</h4>
+<p class="text-xs text-white/40">Nov 15, 2024</p>
+</div>
+<span class="material-symbols-outlined text-white/20">arrow_forward</span>
+</div>
+<div class="p-6 border-l-4 border-white/10 hover:border-primary-container transition-colors flex justify-between items-center">
+<div>
+<h4 class="font-bold">Vicenza</h4>
+<p class="text-xs text-white/40">Nov 20, 2024</p>
+</div>
+<span class="material-symbols-outlined text-white/20">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2 aspect-video bg-[#050505] border border-white/5 rounded-sm overflow-hidden relative grayscale">
+<div class="absolute inset-0 opacity-40">
+<!-- Placeholder for a high-end stylized map -->
+<img class="w-full h-full object-cover" data-alt="Dark aesthetic topographic map of Italy with glowing data points representing city locations" data-location="Italy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg--Z3q8NebV0pEXZmfn5DKcSnoYwp4e77aTvvw2h9j7_KfCRnUQjOhqVdSq_AEY4Fd3lY9CtZMY0HIf7eCTt3Xm6rTkGbv7ub19fG1UUwcFWUtHoZd4PL5tqirmIZLblBuT5BjV7W0CK3SXkcBgoFIXpQIYLCuAWSztf3Xh2Bi5_jn9LQzeg0u5QKO6I56XWuhpJpFPVK94aHBXscPhfOTOz8zUeQOfdg_HE5gnXlZ-4LuvDzqjsEyjCdq9akGL1Dsc8Pfawl8OY"/>
+</div>
+<!-- UI Elements over map -->
+<div class="absolute top-6 left-6 p-4 glass-panel border border-white/10">
+<div class="text-[10px] uppercase font-mono tracking-widest text-primary-container">Active_Hotspots</div>
+<div class="mt-2 flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-primary-container rounded-full animate-pulse"></span>
+<span class="text-sm font-bold">3 Destinations Confirmed</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- What we need -->
+<section class="py-32">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="text-center mb-20">
+<h2 class="font-headline text-5xl font-black mb-6">Support the <span class="text-primary-container">Community</span></h2>
+<p class="text-white/40 max-w-2xl mx-auto">To make this event free for all developers, we are looking for partners who can help us with specific local needs.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Venue -->
+<div class="p-10 bg-surface-container border border-white/5 group hover:border-primary-container transition-all">
+<span class="material-symbols-outlined text-[#FF00FF] text-4xl mb-6 group-hover:scale-110 transition-transform inline-block">business</span>
+<h4 class="text-xl font-bold mb-4">Venue</h4>
+<p class="text-white/50 text-sm">A space capable of hosting 50-80 developers with seating and tables for workshops.</p>
+</div>
+<!-- Wi-Fi -->
+<div class="p-10 bg-surface-container border border-white/5 group hover:border-primary-container transition-all">
+<span class="material-symbols-outlined text-[#FF00FF] text-4xl mb-6 group-hover:scale-110 transition-transform inline-block">wifi</span>
+<h4 class="text-xl font-bold mb-4">High-Speed Wi-Fi</h4>
+<p class="text-white/50 text-sm">Reliable connection to handle cloud-based API calls for 80 simultaneous connections.</p>
+</div>
+<!-- Catering -->
+<div class="p-10 bg-surface-container border border-white/5 group hover:border-primary-container transition-all">
+<span class="material-symbols-outlined text-[#FF00FF] text-4xl mb-6 group-hover:scale-110 transition-transform inline-block">restaurant</span>
+<h4 class="text-xl font-bold mb-4">Catering</h4>
+<p class="text-white/50 text-sm">Coffee breaks and a networking lunch to keep our developers fueled and focused.</p>
+</div>
+<!-- Promotion -->
+<div class="p-10 bg-surface-container border border-white/5 group hover:border-primary-container transition-all">
+<span class="material-symbols-outlined text-[#FF00FF] text-4xl mb-6 group-hover:scale-110 transition-transform inline-block">campaign</span>
+<h4 class="text-xl font-bold mb-4">Promotion</h4>
+<p class="text-white/50 text-sm">Help us reach the local developer ecosystem through your channels and networks.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Past Events -->
+<section class="py-32 bg-surface-container-lowest">
+<div class="max-w-[1440px] mx-auto px-12">
+<div class="flex justify-between items-center mb-16">
+<h2 class="font-headline text-4xl font-bold tracking-tight">Previous Editions</h2>
+<span class="text-primary-container font-mono tracking-tighter">VICENZA_2023 // RECAP</span>
+</div>
+<div class="grid grid-cols-12 grid-rows-2 gap-4 h-[600px]">
+<div class="col-span-8 row-span-2 relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="Large lecture hall filled with engaged developers watching a speaker at a modern tech conference with cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA0ICv2h4VELsCi87-OTKl8XtkmqZtvOG7_xTRZoHGs5uWgIyLoP35l1PMGZ2G42PdyLzigMwSyzbl4WDcTvW4TKAZ9tu7uP1BxnkiGfgBzitp2NSsIvqnhJxO04tqpFArIEYCPVwVaZIX_WZ3yIeuFGKnH6DlwnjAzgT5Y2vIOMwEjsTS5jHx-LHD_5d_q2s8S7tIr-d9pL1z4euVt04aBYwrfJAq3JTfyQxs_STbHmzEHCbmncb7aD-QteinMLE3enYYkPjZhK4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+<div>
+<p class="text-primary font-bold">Vicenza Convention Center</p>
+<p class="text-sm text-white/60">Over 150 developers attended the Google Cloud Masterclass.</p>
+</div>
+</div>
+</div>
+<div class="col-span-4 row-span-1 relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="Close up of a developer working on a laptop with lines of code visible, blurred conference background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7jKQtdQDDH-aAKvux0dlcsmwHTWpPQpI_-YAY8z3_O2jAkx-WxfaNFglFUf7EvNleEimiSBT34FVyUB7txnZSV-ptaFPvZg03rUYRMelWXq3D4dpQ3wwe-8zKqyJn3qTZWyk7Z_Tz2g3oS1SXkWR4fFK7yhGe43BZHSGZ6MWhGFmvrY0oFy39nyGNZzUwv1tRSf9nY0QlxxcrzBOZDOk-yUMruemUb_kTUk4n3wIZFDComDb-sSoye8dGYu3pN7ArrfNaU9D_Al8"/>
+</div>
+<div class="col-span-4 row-span-1 relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" data-alt="Group of developers networking during a coffee break, laughing and discussing technical concepts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjur2aFW-lWsamRJYSDZQ9_QHRcrvpKy0VjcZM_94gN5tAQHFKCujfMQvftbPaarYOFWU7yO_U0r9--Qc5x15ABK8d7IZ-j4vX4soQJLUiw9NJGKN6HF-R2hK6JM5UI14t8Pho-CpJ4nl0h-_exOeVVnPvTB_hF3W-GXJCB06drw5aipisRF1Xz0WCoew_H6ElK41moYFLODz0ezbp0CDnKSVUY01kQS4yXAf5AiVpUdbD1UmV24UsWD3ixRn50hnxJVSTi0mYf80"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Sponsors -->
+<section class="py-32">
+<div class="max-w-[1440px] mx-auto px-12">
+<p class="text-center text-xs uppercase tracking-[0.4em] text-white/30 mb-16">Supported by Industry Leaders</p>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 items-center opacity-40">
+<!-- Clean white logos placeholder -->
+<div class="h-12 flex justify-center grayscale brightness-200">
+<img alt="Google" class="h-full w-auto" data-alt="Google logo in white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1-QOra7K3ieJLfxUTTAKLubUI1cz0vDxfPtOJy_bFg83M4TtcHFrFvi_68OKv8BWcvI4zOm8RVP0ybZ7aR1S1VWqB-sl5NvG6wpKz68pz5Gpyw_RUOsr64DM_Njroj6VgnWYdUSwaAhjksNP1DhtgFyHbaE5S1BIVMum61EUC8nRTWO9yR0mO9lp_aGaLngjoslDnTMN--fNJiK_novgKnf-eoK-XzecazyApEmlUGwSEGghxHa8yEXK2CsWkaPffIrNjJsQwEBk"/>
+</div>
+<div class="h-8 flex justify-center grayscale brightness-200">
+<img alt="TypeScript" class="h-full w-auto" data-alt="TypeScript logo in white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9CTiz2a_knqf_akYxyDw8GNhdn_ZCq5Oj0pZQ3qf4i_p03RQfxSBBdzQU48Dg21-wESZH2JlfsYqXZxXriDMfmJq-HErpdVNfBA3--p7FcUGHHFNDRyOlB5gJEpzoYrlmdc8CccD6DbRa6rd27HC5sU-GXMzD3092iCSupCSCw1pSQmpUqjWC7sXdtTPOOJFP6XoD3ToJZsc_qLI0McaW7diZ7P9e99_iwLSQ4V2ZdNUCVR2GJJWkr2zdjSqaxhHBgvrmcmel6Ds"/>
+</div>
+<div class="h-10 flex justify-center grayscale brightness-200">
+<img alt="Google Cloud" class="h-full w-auto" data-alt="Google Cloud logo in white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAux0NoHgw1HHSPD76enKEk8mbMwoDNVtBgecUGMlBi5ajTouhqsJrIRJHLzS3Qygh8ZpqZ8JrWGL-fROmoIURlptnnyAX0jewn5B-q2vaxoDizY2Lts_Gd8neBxEYsH5UOU5k_yWGaImwl9_PWYzRMxr6zrz-oBQvObGu8VQarny2HC-S5TGk_JViBmlfSos-RPPYIOnYhea8ijvAxPY_qEUPJv2Z2gn5vtaebyc14dtUETZyAp7iSt1zDbFJAhpOYFuF2bDWQnOA"/>
+</div>
+<div class="h-12 flex justify-center grayscale brightness-200">
+<img alt="Partner" class="h-full w-auto" data-alt="Corporate logo in white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzgRFA7XKydlWF0WpQ6GIUoG-ejDL3zQV5OJmXHgAF8S4wupGbcvcdkTjKYOhbLaJMPTUYzFVPVOIyPtU-Wdu6DahviRc1Y2D8cshXzX2qzWhX4PMVzVdVls9Z7Df1b_BhW8M4q1kn-161sU3Z5K8TJC_zcT-uXu6gLRDvgoE5gW42HxcXBGl39oqQ03L6Fi8L6SNbsAjnm27mwP_8hYtog5GO11qAE49Syw2zOTkzMe8OCziHqWOveAUuF1NLk2mFnJz9wsZVS0o"/>
+</div>
+<div class="h-10 flex justify-center grayscale brightness-200">
+<img alt="Partner" class="h-full w-auto" data-alt="Corporate logo in white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2hyrpSFuy6hgNubANkbP-aVaXazbYTHwZQl5PpFvL3XfHSeYnZRRU1QDKJ4Q7cDM6OC34_X0dmXLWoE5OU2ahpbuvJCifIMQ3WQ256EB_fIkmGjuOgcS62Ul5dsLrZ-g99oEAFCYPNKdUyNVayrRNdyrumfiPFBZhqNuk2bVRH4sDVeuHNh20i89g8jZgcVo-aPpms3eOW3xa6BS-9K_u5-jLQcBp7fugcox0WBIbzJVXMHOnqR_PiQMY0qcCO32_oFqSg6pqB3w"/>
+</div>
+<div class="h-8 flex justify-center grayscale brightness-200">
+<img alt="Partner" class="h-full w-auto" data-alt="Corporate logo in white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTwVNP3D8CR-pX1yueCkd_yE4D4lypjnEQQBz2jrcUBeM4SuATeKmAF81MimS0EFkc46jGbTluf90mAEzqwKONaECVSwIJgdBjlr6FmPmyhQUnU5DEq7Ye7uLRD86p6xVYNEJbExwvl42TvQWn4QILw4f1dXX_ENqYveaC3_FUqvlcZBcgytKJqpR2sgKE3hJtUz5YqiHJLxnu32_t0yGrBPuS9eQwq0aHc9b1E67XcR0jS6648rDsAx-q-h8-I8T-nWDX-LPjFT8"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact/CTA -->
+<section class="py-40 relative">
+<div class="max-w-4xl mx-auto px-12 text-center relative z-10">
+<h2 class="font-headline text-6xl md:text-7xl font-black mb-8 leading-tight">Ready to fuel the <span class="text-primary-container">Next Wave</span> of AI?</h2>
+<p class="text-xl text-white/50 mb-12 max-w-2xl mx-auto">Join us as a sponsor and connect with Italy's most ambitious developers. Limited slots available for the 2024 tour.</p>
+<button class="bg-primary-container text-on-primary-container px-12 py-6 text-xl font-black tracking-tight hover:shadow-[0_0_50px_rgba(255,0,255,0.6)] transition-all flex items-center gap-4 mx-auto">
+                    Become a sponsor
+                    <span class="material-symbols-outlined">rocket_launch</span>
+</button>
+</div>
+<!-- Background element -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[1px] bg-gradient-to-r from-transparent via-primary-container/30 to-transparent"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#FF00FF]/10 bg-[#0e0e0e] font-['Inter'] text-sm tracking-wide">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full gap-8 max-w-[1440px] mx-auto">
+<div class="text-lg font-black text-white/50">
+                CodeLabs
+            </div>
+<div class="flex gap-8">
+<a class="text-white/40 hover:text-[#c3c0ff] transition-colors" href="#">Sponsorship</a>
+<a class="text-white/40 hover:text-[#c3c0ff] transition-colors" href="#">Contact Info</a>
+<a class="text-white/40 hover:text-[#c3c0ff] transition-colors" href="#">Privacy Policy</a>
+<a class="text-white/40 hover:text-[#c3c0ff] transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="text-white/40 text-center md:text-right">
+                © 2024 Google CodeLabs. All rights reserved. Built with Neon Noir Precision.
+            </div>
+</div>
+</footer>
+</body></html>

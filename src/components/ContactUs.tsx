@@ -21,9 +21,7 @@ function ArrowRightIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export function ContactUs() {
   return (
-    <a
-      href="mailto:fabio.biondi.developer@gmail.com?subject=Info%20per%20diventare%20sponsor%20di%20un%20Codelab"
-    >
+    <a href="mailto:fabio.biondi.developer@gmail.com?subject=Info%20per%20diventare%20sponsor%20di%20un%20Codelab">
       <section id="contact-us" aria-label="Contattaci">
         <Container>
           <div className="relative -mx-4 overflow-hidden bg-blue-50 px-4 py-20 sm:-mx-6 sm:px-6 md:mx-0 md:rounded-5xl md:px-16 xl:px-24 xl:py-36">

@@ -1,5 +1,5 @@
 import { type Metadata } from 'next'
-import { DM_Sans, Inter } from 'next/font/google'
+import { DM_Sans, Inter, Space_Grotesk } from 'next/font/google'
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
@@ -16,6 +16,13 @@ const dmSans = DM_Sans({
   weight: ['400', '500', '700'],
   display: 'swap',
   variable: '--font-dm-sans',
+})
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-space-grotesk',
 })
 
 export const metadata: Metadata = {
@@ -39,6 +46,7 @@ export default function RootLayout({
         'h-full bg-white antialiased',
         inter.variable,
         dmSans.variable,
+        spaceGrotesk.variable,
       )}
     >
       <body className="flex min-h-full">
