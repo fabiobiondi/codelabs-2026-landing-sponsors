@@ -113,10 +113,20 @@ export function CoreTracksSection() {
               <li className="flex gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-primary-container" />
                 <span>
+                  Imparerai a configurare e utilizzare l'SDK di Gemini: generare
+                  contenuti, streaming, output strutturati, ChatBot,
+                  Interactions API, Grounding Tools e molto altro.
+                </span>
+              </li>
+
+              <li className="flex gap-3">
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-primary-container" />
+                <span>
                   Utilizzerai NodeJS per creare delle API REST in NodeJS che
                   integrano funzionalità AI con Gemini SDK
                 </span>
               </li>
+
               <li className="flex gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-primary-container" />
                 <span>
