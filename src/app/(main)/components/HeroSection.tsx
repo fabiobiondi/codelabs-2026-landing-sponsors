@@ -23,7 +23,7 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-black pt-32 pb-24">
+    <section id="top" className="relative flex min-h-screen items-center overflow-hidden bg-black pt-32 pb-24">
       <div className="absolute inset-0 z-0 opacity-30">
         <div className="absolute top-1/4 left-1/4 h-96 w-96 animate-pulse rounded-full bg-[#FF00FF] blur-[160px]" />
         <div className="absolute right-1/4 bottom-1/4 h-[500px] w-[500px] rounded-full bg-secondary-container blur-[200px]" />
