@@ -29,7 +29,7 @@ export default function MainLayout({
       <footer className="w-full border-t border-[#FF00FF]/10 bg-surface-container-lowest font-body text-sm tracking-wide">
         <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between gap-8 px-12 py-16 md:flex-row">
           <div className="text-lg font-black text-white/50">
-            Gemini Workshop
+            Gemini CodeLabs #1
             <br />
             <span className="font-normal">Fabio Biondi</span>
           </div>

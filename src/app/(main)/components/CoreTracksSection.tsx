@@ -10,7 +10,7 @@ export function CoreTracksSection() {
             <div className="h-1 w-24 bg-primary-container" />
           </div>
           <p className="font-mono text-sm tracking-tighter text-white/40 uppercase">
-            Event_Structure_v.01
+            SPEAKER: FABIO BIONDI
           </p>
         </div>
         <div className="grid gap-px overflow-hidden border border-white/5 bg-white/5 md:grid-cols-2">

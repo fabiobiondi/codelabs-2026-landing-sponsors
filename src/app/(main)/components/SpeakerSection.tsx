@@ -32,7 +32,8 @@ export function SpeakerSection() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <p className="text-lg leading-relaxed text-white/70">
               Freelance developer con oltre 20 anni di esperienza nello sviluppo
-              software, Google Developer Expert in Angular, (ex Microsoft MVP).
+              software, Google Developer Expert in Angular, (ex Microsoft MVP) e
+              formatore FrontEnd.
               <br />
               Speaker abituale in moltissime conferenze, unisce la passione per
               UI/UX e sviluppo frontend con un forte interesse per
@@ -49,9 +50,13 @@ export function SpeakerSection() {
               >
                 LearnByDo.ing
               </a>
-              , il suo core business è la formazione FrontEnd (principalmente su
-              tutto ciò che ruota attorno ad Angular e React), Web Technologies
-              e AI Generativa
+              ,{' '}
+              <span className="text-white">
+                {' '}
+                il suo core business è la formazione FrontEnd (principalmente su
+                tutto ciò che ruota attorno ad Angular e React), Web
+                Technologies e AI Generativa.
+              </span>
             </p>
           </div>
           <div className="mt-12 flex gap-4">

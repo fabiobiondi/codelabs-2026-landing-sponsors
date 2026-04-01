@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from 'react'
 
 const navItems = [
   { label: 'IL PROGRAMMA', id: 'programma' },
-  { label: 'ISTRUTTORE', id: 'istruttore' },
+  { label: 'SPEAKER', id: 'istruttore' },
   { label: 'DATE', id: 'date' },
   { label: 'REQUISITI', id: 'requisiti' },
 ]
@@ -28,10 +28,15 @@ export function MainNavigation({ isAtTop }: { isAtTop?: boolean }) {
       {
         rootMargin: '-20% 0px -70% 0px',
         threshold: 0,
-      }
+      },
     )
 
-    const allSections = [...navItems.map(item => item.id), 'past-events', 'sponsors', 'cta']
+    const allSections = [
+      ...navItems.map((item) => item.id),
+      'past-events',
+      'sponsors',
+      'cta',
+    ]
     allSections.forEach((id) => {
       const element = document.getElementById(id)
       if (element) observer.observe(element)
@@ -48,7 +53,7 @@ export function MainNavigation({ isAtTop }: { isAtTop?: boolean }) {
         width: activeRef.offsetWidth,
       })
     } else {
-        setIndicatorStyle({ left: 0, width: 0 })
+      setIndicatorStyle({ left: 0, width: 0 })
     }
   }, [currentActiveId])
 
@@ -69,7 +74,7 @@ export function MainNavigation({ isAtTop }: { isAtTop?: boolean }) {
   }
 
   return (
-    <div className="relative hidden md:flex items-center gap-8 font-headline tracking-tight uppercase text-sm font-bold">
+    <div className="relative hidden items-center gap-8 font-headline text-sm font-bold tracking-tight uppercase md:flex">
       {navItems.map((item) => (
         <button
           key={item.id}
@@ -78,7 +83,9 @@ export function MainNavigation({ isAtTop }: { isAtTop?: boolean }) {
           }}
           onClick={() => scrollToSection(item.id)}
           className={`relative pb-1 transition-colors duration-300 ${
-            currentActiveId === item.id ? 'text-primary-container' : 'text-white/60 hover:text-white'
+            currentActiveId === item.id
+              ? 'text-primary-container'
+              : 'text-white/60 hover:text-white'
           }`}
         >
           {item.label}
