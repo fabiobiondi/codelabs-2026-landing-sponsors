@@ -138,7 +138,8 @@ export function CoreTracksSection() {
             <div className="rounded-xl border border-primary-container/30 bg-primary-container/10 p-6">
               <p className="mb-3 leading-relaxed font-bold text-white/90">
                 Ogni partecipante riceverà un credito Google Cloud di 5 euro per
-                iniziare a sperimentare
+                iniziare a sperimentare senza la necessità di usare la carta di
+                credito
               </p>
               <p className="leading-relaxed text-white/80">
                 Organizzeremo inoltre una &quot;challenge&quot; per il progetto
