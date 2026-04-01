@@ -7,21 +7,28 @@ export function SupportSection() {
         'Porta il tuo computer portatile già carico. In alcune location potresti non avere la possibilità di caricarlo durante il workshop',
     },
     {
-      icon: 'terminal',
-      title: 'Node v. 24',
-      description: 'Assicurati di avere la versione 24 di Node già installato.',
-    },
-    {
-      icon: 'code',
-      title: 'Un IDE',
-      description:
-        'Potresti anche usare Notepad 😅  ma ti consigliamo Antigravity, Visual Studio Code, Webstorm o simili',
-    },
-    {
       icon: 'mail',
       title: 'Un account GMail personale',
       description:
         'Un account GMail personale (no business o workspace). Fondamentale per attivare i crediti gratuiti che ti forniremo',
+    },
+    {
+      icon: 'nodejs',
+      title: 'Node v. 24',
+      description: 'Assicurati di avere la versione 24 di Node già installato.',
+    },
+
+    {
+      icon: 'code',
+      title: 'Text Editor / IDE',
+      description:
+        'Potresti anche usare Notepad 😅  ma ti consigliamo Antigravity, Visual Studio Code, Webstorm o simili',
+    },
+    {
+      icon: 'terminal',
+      title: 'Terminale',
+      description:
+        "Conoscenza base dell'utilizzo del Terminale: esterno o integrato nell'ID",
     },
     {
       icon: 'wifi',
@@ -47,7 +54,7 @@ export function SupportSection() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {items.map((item, i) => (
             <div
               key={i}
