@@ -3,7 +3,7 @@ export const regionInfo: Record<
   { city: string; date: string | null; url?: string; community: string }
 > = {
   IT34: { city: 'Vicenza', date: '2026-01-23', community: 'Confartigianato' },
-  IT62: { city: 'Roma', date: '2026-05-05', community: 'google group roma' },
+  IT62: { city: 'Roma', date: null, community: 'google group roma' },
   IT75: {
     city: 'Lecce',
     date: '2026-07-06',
