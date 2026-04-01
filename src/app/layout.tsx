@@ -32,6 +32,30 @@ export const metadata: Metadata = {
   },
   description:
     "Una giornata dedicata all'integrazione di intelligenza artificiale generativa in JavaScript con Google Gemini. ",
+  openGraph: {
+    title: 'Google CodeLabs #1 - Gemini Workshop con Fabio Biondi e i GDG',
+    description:
+      "Una giornata dedicata all'integrazione di intelligenza artificiale generativa in JavaScript con Google Gemini.",
+    url: 'https://codelabs.developers.google.com', // Assuming URL, user didn't specify.
+    siteName: 'Google CodeLabs #1',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Google CodeLabs Gemini Workshop',
+      },
+    ],
+    locale: 'it_IT',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Google CodeLabs #1 - Gemini Workshop con Fabio Biondi e i GDG',
+    description:
+      "Una giornata dedicata all'integrazione di intelligenza artificiale generativa in JavaScript con Google Gemini.",
+    images: ['/opengraph-image.png'],
+  },
 }
 
 export default function RootLayout({

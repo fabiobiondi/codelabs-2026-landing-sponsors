@@ -44,8 +44,9 @@ export function HeroSection() {
             e TypeScript
           </h1>
           <p className="max-w-xl text-xl leading-relaxed font-light text-white/60 md:text-2xl">
-            Un'intera giornata gratuita per sviluppatori con l&apos;obiettivo di
-            apprendere{' '}
+            Un'intera giornata{' '}
+            <span className="text-white underline">gratuita</span> per
+            sviluppatori con l&apos;obiettivo di apprendere{' '}
             <span className="font-semibold text-white">
               le fondamenta per lo sviluppo di applicazioni agentiche con Google
               Gemini in applicazioni TypeScript
