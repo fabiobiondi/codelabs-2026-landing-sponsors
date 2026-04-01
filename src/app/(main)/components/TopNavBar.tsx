@@ -46,7 +46,7 @@ export function TopNavBar() {
           Gemini CodeLabs #1
         </div>
         <MainNavigation isAtTop={isAtTop} />
-        <div className="flex items-center gap-4">
+        <div className="flex hidden items-center gap-4 sm:block">
           <button
             onClick={() => scrollToSection('sponsors')}
             className="border border-transparent bg-primary-container px-6 py-2 font-bold text-on-primary-container transition-all duration-300 hover:border-[#FF00FF] hover:bg-[#FF00FF]/10 hover:text-white active:scale-95"
