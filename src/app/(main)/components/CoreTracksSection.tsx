@@ -2,7 +2,7 @@ export function CoreTracksSection() {
   return (
     <section id="programma" className="bg-surface-container-lowest py-32">
       <div className="mx-auto max-w-[1440px] px-4 md:px-12">
-        <div className="mb-20 flex flex-col items-end justify-between gap-8 md:flex-row">
+        <div className="mb-20 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <div>
             <h2 className="mb-4 font-headline text-5xl font-bold tracking-tight uppercase">
               Il programma
