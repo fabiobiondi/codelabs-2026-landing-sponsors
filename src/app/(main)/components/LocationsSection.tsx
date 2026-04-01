@@ -17,10 +17,10 @@ export function LocationsSection() {
           {Object.entries(regionInfo).map(([id, event]) => (
             <div
               key={id}
-              className="group flex flex-col justify-between border border-white/10 bg-surface-container-low p-8 transition-all duration-300 hover:border-primary-container"
+              className="group flex flex-col justify-between border border-white/10 bg-surface-container-low p-6 transition-all duration-300 hover:border-primary-container md:p-8"
             >
               <div>
-                <div className="mb-6 flex items-start justify-between">
+                <div className="mb-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:gap-0">
                   <h4 className="text-2xl font-bold">{event.city}</h4>
                   <span className="border border-primary-container/20 bg-primary-container/10 px-4 py-2 font-headline text-lg font-bold text-white">
                     {event.date
