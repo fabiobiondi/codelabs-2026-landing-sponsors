@@ -4,7 +4,7 @@ import fabioBiondiImg from '@/images/avatars/fabiobiondi.png'
 export function SpeakerSection() {
   return (
     <section id="istruttore" className="relative overflow-hidden py-32">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-16 px-4 md:px-12 md:flex-row">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-16 px-4 md:flex-row md:px-12">
         <div className="group relative w-full md:w-1/3">
           <div className="absolute -inset-4 bg-primary-container opacity-10 blur-xl transition-opacity group-hover:opacity-20" />
           <Image
@@ -32,7 +32,7 @@ export function SpeakerSection() {
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <p className="text-lg leading-relaxed text-white/70">
               Freelance developer con oltre 20 anni di esperienza nello sviluppo
-              software, Google Developer Expert in Angular, (ex Microsoft MVP) e
+              FrontEnd, Google Developer Expert in Angular, (ex Microsoft MVP) e
               formatore FrontEnd.
               <br />
               Speaker abituale in moltissime conferenze, unisce la passione per

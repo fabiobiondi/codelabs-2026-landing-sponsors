@@ -9,7 +9,7 @@ export function Speaker() {
         <div className="grid grid-cols-1 items-center gap-x-12 gap-y-10 lg:grid-cols-2">
           <div className="group relative mx-auto h-80 w-80 transform overflow-hidden rounded-4xl">
             <div className="absolute inset-0 rounded-4xl border border-blue-300 transition duration-300 group-hover:scale-95" />
-            <div className="absolute inset-0 bg-indigo-50 rounded-4xl overflow-hidden">
+            <div className="absolute inset-0 overflow-hidden rounded-4xl bg-indigo-50">
               <Image
                 className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
                 src={FabioBiondi}
@@ -28,12 +28,13 @@ export function Speaker() {
               Freelance | Google Expert Angular | LearnByDo.ing
             </p>
             <p className="mt-4 text-base leading-7 tracking-tight text-slate-600">
-              Fabio Biondi è un freelance developer, Google Developer Expert in Angular,
-              Microsoft MVP e trainer con oltre 20 anni di esperienza nello sviluppo software.
-              Fondatore della community LearnByDo.ing, è speaker in conferenze nazionali e
-              internazionali e creatore di corsi online su Angular, React e tecnologie web moderne.
-              È appassionato di UI/UX, sviluppo frontend e intelligenza artificiale applicata
-              allo sviluppo software.
+              Fabio Biondi è un freelance developer, Google Developer Expert in
+              Angular, Microsoft MVP e trainer con oltre 20 anni di esperienza
+              nello sviluppo FrontEnd. Fondatore della community LearnByDo.ing,
+              è speaker in conferenze nazionali e internazionali e creatore di
+              corsi online su Angular, React e tecnologie web moderne. È
+              appassionato di UI/UX, sviluppo frontend e intelligenza
+              artificiale applicata allo sviluppo software.
             </p>
           </div>
         </div>
