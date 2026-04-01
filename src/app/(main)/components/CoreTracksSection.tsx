@@ -128,7 +128,7 @@ export function CoreTracksSection() {
               </li>
 
               <li className="flex gap-3">
-                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-primary-container" />
+                <span className="bg-primary-contawiner mt-1.5 h-1.5 w-1.5 shrink-0" />
                 <span>
                   Effettuerai il deploy su{' '}
                   <span className="font-bold">Google Cloud</span>.
