@@ -70,7 +70,26 @@ export function HeroSection() {
                 Prossime Tappe
               </p>
               <p className="font-headline font-bold text-white italic transition-all group-hover:text-primary-container">
-                {tourDates.map((info) => info.city.toUpperCase()).join(' • ')}
+                {tourDates.map((info, index) => {
+                  const isPassed =
+                    info.date && new Date(info.date) < new Date()
+                  return (
+                    <span key={info.city}>
+                      <span
+                        className={
+                          isPassed
+                            ? 'text-white/30 line-through decoration-white/40'
+                            : ''
+                        }
+                      >
+                        {info.city.toUpperCase()}
+                      </span>
+                      {index < tourDates.length - 1 && (
+                        <span className="mx-2 not-italic text-white/20">•</span>
+                      )}
+                    </span>
+                  )
+                })}
               </p>
             </button>
           </div>
