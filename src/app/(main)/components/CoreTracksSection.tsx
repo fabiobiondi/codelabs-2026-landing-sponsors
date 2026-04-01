@@ -15,13 +15,13 @@ export function CoreTracksSection() {
         </div>
         <div className="grid gap-px overflow-hidden border border-white/5 bg-white/5 md:grid-cols-2">
           {/* Masterclass */}
-          <div className="group bg-black p-6 md:p-12 transition-all duration-500 hover:bg-surface-container-low">
+          <div className="group bg-black p-6 transition-all duration-500 hover:bg-surface-container-low md:p-12">
             <div className="mb-8 flex items-start justify-between">
               <span className="material-symbols-outlined text-5xl font-light text-primary-container">
                 school
               </span>
               <span className="border border-white/10 px-3 py-1 font-mono text-xs text-white/30">
-                09:00 - 13:00
+                10:00 - 13:00
               </span>
             </div>
             <h3 className="mb-6 font-headline text-3xl font-bold">
@@ -78,13 +78,13 @@ export function CoreTracksSection() {
             </ul>
           </div>
           {/* Workshop */}
-          <div className="group bg-black p-6 md:p-12 transition-all duration-500 hover:bg-surface-container-low">
+          <div className="group bg-black p-6 transition-all duration-500 hover:bg-surface-container-low md:p-12">
             <div className="mb-8 flex items-start justify-between">
               <span className="material-symbols-outlined text-5xl font-light text-primary-container">
                 terminal
               </span>
               <span className="border border-white/10 px-3 py-1 font-mono text-xs text-white/30">
-                14:00 - 18:00
+                14:30 - 18:00
               </span>
             </div>
             <h3 className="mb-6 font-headline text-3xl font-bold">
