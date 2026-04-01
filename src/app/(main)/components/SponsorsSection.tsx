@@ -56,7 +56,7 @@ export function SponsorsSection() {
 
   return (
     <section id="sponsors" className="py-32">
-      <div className="mx-auto max-w-[1440px] px-12">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-12">
         <p className="mb-16 text-center text-xs tracking-[0.4em] text-white/30 uppercase">
           Ci hanno gia supportato
         </p>

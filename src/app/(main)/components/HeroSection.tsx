@@ -28,7 +28,7 @@ export function HeroSection() {
         <div className="absolute top-1/4 left-1/4 h-96 w-96 animate-pulse rounded-full bg-[#FF00FF] blur-[160px]" />
         <div className="absolute right-1/4 bottom-1/4 h-[500px] w-[500px] rounded-full bg-secondary-container blur-[200px]" />
       </div>
-      <div className="relative z-10 mx-auto grid max-w-[1440px] items-center gap-16 px-6 md:px-12 lg:grid-cols-2">
+      <div className="relative z-10 mx-auto grid max-w-[1440px] items-center gap-16 px-4 md:px-12 lg:grid-cols-2">
         <div className="space-y-8">
           <div className="inline-flex items-center gap-2 rounded-sm border border-outline-variant/20 bg-surface-container-high px-3 py-1">
             <span className="h-2 w-2 animate-ping rounded-full bg-primary-container" />
@@ -97,7 +97,7 @@ export function HeroSection() {
           </div>
         </div>
         <div className="relative hidden lg:block">
-          <div className="aspect-square overflow-hidden rounded-lg border border-white/5 bg-surface-container-lowest p-8 shadow-2xl">
+          <div className="aspect-square overflow-hidden rounded-lg border border-white/5 bg-surface-container-lowest p-6 shadow-2xl md:p-8">
             <div className="absolute top-0 left-0 h-1 w-full bg-linear-to-r from-transparent via-primary-container to-transparent opacity-50" />
             <ItalyMap />
           </div>

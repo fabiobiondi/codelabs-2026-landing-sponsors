@@ -1,7 +1,7 @@
 export function CTASection() {
   return (
     <section id="cta" className="relative py-40">
-      <div className="relative z-10 mx-auto max-w-4xl px-12 text-center">
+      <div className="relative z-10 mx-auto max-w-4xl px-4 md:px-12 text-center">
         <h2 className="mb-8 font-headline text-3xl leading-tight font-black md:text-6xl md:text-7xl">
           Vuoi <span className="text-primary-container">supportare</span> la
           community?

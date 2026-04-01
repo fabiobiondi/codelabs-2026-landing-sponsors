@@ -4,7 +4,7 @@ import fabioBiondiImg from '@/images/avatars/fabiobiondi.png'
 export function SpeakerSection() {
   return (
     <section id="istruttore" className="relative overflow-hidden py-32">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-16 px-12 md:flex-row">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-16 px-4 md:px-12 md:flex-row">
         <div className="group relative w-full md:w-1/3">
           <div className="absolute -inset-4 bg-primary-container opacity-10 blur-xl transition-opacity group-hover:opacity-20" />
           <Image

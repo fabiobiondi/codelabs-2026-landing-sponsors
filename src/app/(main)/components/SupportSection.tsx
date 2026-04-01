@@ -32,7 +32,7 @@ export function SupportSection() {
 
   return (
     <section id="requisiti" className="py-32">
-      <div className="mx-auto max-w-[1440px] px-12">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-12">
         <div className="mb-20 text-center">
           <h2 className="mb-6 font-headline text-5xl font-black">
             <span className="text-primary-container">Cosa portare</span> al
@@ -48,10 +48,10 @@ export function SupportSection() {
           </div>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
-          {items.map((item) => (
+          {items.map((item, i) => (
             <div
-              key={item.title}
-              className="group border border-white/5 bg-surface-container p-10 transition-all hover:border-primary-container"
+              key={i}
+              className="group border border-white/5 bg-surface-container p-6 transition-all hover:border-primary-container md:p-10"
             >
               <span className="material-symbols-outlined mb-6 inline-block text-4xl text-[#FF00FF] transition-transform group-hover:scale-110">
                 {item.icon}

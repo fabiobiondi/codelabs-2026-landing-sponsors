@@ -1,7 +1,7 @@
 export function CoreTracksSection() {
   return (
     <section id="programma" className="bg-surface-container-lowest py-32">
-      <div className="mx-auto max-w-[1440px] px-12">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-12">
         <div className="mb-20 flex flex-col items-end justify-between gap-8 md:flex-row">
           <div>
             <h2 className="mb-4 font-headline text-5xl font-bold tracking-tight uppercase">
@@ -15,7 +15,7 @@ export function CoreTracksSection() {
         </div>
         <div className="grid gap-px overflow-hidden border border-white/5 bg-white/5 md:grid-cols-2">
           {/* Masterclass */}
-          <div className="group bg-black p-12 transition-all duration-500 hover:bg-surface-container-low">
+          <div className="group bg-black p-6 md:p-12 transition-all duration-500 hover:bg-surface-container-low">
             <div className="mb-8 flex items-start justify-between">
               <span className="material-symbols-outlined text-5xl font-light text-primary-container">
                 school
@@ -78,7 +78,7 @@ export function CoreTracksSection() {
             </ul>
           </div>
           {/* Workshop */}
-          <div className="group bg-black p-12 transition-all duration-500 hover:bg-surface-container-low">
+          <div className="group bg-black p-6 md:p-12 transition-all duration-500 hover:bg-surface-container-low">
             <div className="mb-8 flex items-start justify-between">
               <span className="material-symbols-outlined text-5xl font-light text-primary-container">
                 terminal

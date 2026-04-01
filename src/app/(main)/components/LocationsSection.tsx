@@ -3,7 +3,7 @@ import { regionInfo } from './regionData'
 export function LocationsSection() {
   return (
     <section id="date" className="bg-surface-container-lowest py-32">
-      <div className="mx-auto max-w-[1440px] px-12">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-12">
         <div className="mb-16">
           <h2 className="mb-6 font-headline text-4xl font-bold tracking-tight">
             Tour 2026

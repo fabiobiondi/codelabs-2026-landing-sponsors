@@ -37,7 +37,7 @@ export function TopNavBar() {
 
   return (
     <nav className="fixed top-0 z-50 w-full bg-black/40 bg-linear-to-b from-surface-container-low to-transparent shadow-[0_0_30px_rgba(255,0,255,0.1)] backdrop-blur-xl">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-12 py-6">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-4 py-6 md:px-12">
         <div
           className={`font-headline text-2xl font-bold tracking-tighter transition-colors duration-300 ${
             isAtTop ? 'text-primary-container' : 'text-white'

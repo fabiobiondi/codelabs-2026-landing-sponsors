@@ -212,7 +212,7 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
       role="list"
       className={clsx(
         className,
-        'space-y-8 bg-white/60 px-10 py-14 text-center shadow-xl shadow-blue-900/5 backdrop-blur-sm',
+        'space-y-8 bg-white/60 px-4 py-10 text-center shadow-xl shadow-blue-900/5 backdrop-blur-sm md:px-10 md:py-14',
       )}
     >
       {day.timeSlots.map((timeSlot, timeSlotIndex) => (

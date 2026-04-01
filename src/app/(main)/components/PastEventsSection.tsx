@@ -9,7 +9,7 @@ import photo9 from '@/images/photo-gallery/IMG_6297.jpg'
 export function PastEventsSection() {
   return (
     <section id="past-events" className="bg-surface-container-lowest py-32">
-      <div className="mx-auto max-w-[1440px] px-12">
+      <div className="mx-auto max-w-[1440px] px-4 md:px-12">
         <div className="mb-16 flex items-center justify-between">
           <h2 className="font-headline text-4xl font-bold tracking-tight">
             Edizioni Precedenti
@@ -26,7 +26,7 @@ export function PastEventsSection() {
               alt="Large lecture hall filled with engaged developers"
               fill
             />
-            <div className="absolute inset-0 flex items-end bg-linear-to-t from-black/80 to-transparent p-8">
+            <div className="absolute inset-0 flex items-end bg-linear-to-t from-black/80 to-transparent p-4 md:p-8">
               <div>
                 <p className="font-bold text-primary">
                   Vicenza | Confartigianato | DIH
