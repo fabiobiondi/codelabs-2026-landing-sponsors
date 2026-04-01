@@ -43,7 +43,7 @@ export default function RootLayout({
     <html
       lang="it"
       className={clsx(
-        'h-full bg-white antialiased',
+        'h-full bg-black antialiased',
         inter.variable,
         dmSans.variable,
         spaceGrotesk.variable,

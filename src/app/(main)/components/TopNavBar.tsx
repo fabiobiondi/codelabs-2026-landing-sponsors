@@ -43,7 +43,7 @@ export function TopNavBar() {
             isAtTop ? 'text-primary-container' : 'text-white'
           }`}
         >
-          CodeLabs
+          Gemini CodeLabs #1
         </div>
         <MainNavigation isAtTop={isAtTop} />
         <div className="flex items-center gap-4">

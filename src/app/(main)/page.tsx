@@ -1,27 +1,23 @@
-import { ContactUs } from '@/components/ContactUs'
-import { EventMap } from '@/components/EventMap'
-import { Requirements } from '@/components/Requirements'
-import { Hero } from '@/components/Hero'
-import { Newsletter } from '@/components/Newsletter'
-import { PhotoGallery } from '@/components/PhotoGallery'
-import { Schedule } from '@/components/Schedule'
-import { Speaker } from '@/components/Speaker'
-import { Speakers } from '@/components/Speakers'
-import { Sponsors } from '@/components/Sponsors'
+import { HeroSection } from './components/HeroSection'
+import { CoreTracksSection } from './components/CoreTracksSection'
+import { SpeakerSection } from './components/SpeakerSection'
+import { LocationsSection } from './components/LocationsSection'
+import { SupportSection } from './components/SupportSection'
+import { PastEventsSection } from './components/PastEventsSection'
+import { SponsorsSection } from './components/SponsorsSection'
+import { CTASection } from './components/CTASection'
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
-      <Hero />
-      {/* <Speakers /> */}
-      <Speaker />
-      {/* <Schedule /> */}
-      <EventMap />
-      <Requirements />
-      <PhotoGallery />
-      <Sponsors />
-      <ContactUs />
-      {/* <Newsletter /> */}
+      <HeroSection />
+      <CoreTracksSection />
+      <SpeakerSection />
+      <LocationsSection />
+      <SupportSection />
+      <PastEventsSection />
+      <SponsorsSection />
+      <CTASection />
     </>
   )
 }

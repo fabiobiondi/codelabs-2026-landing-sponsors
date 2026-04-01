@@ -18,8 +18,8 @@ export function PastEventsSection() {
             VICENZA 2026 // GENNAIO
           </span>
         </div>
-        <div className="grid h-[600px] grid-cols-12 grid-rows-2 gap-4">
-          <div className="group relative col-span-8 row-span-2 overflow-hidden">
+        <div className="grid grid-cols-1 gap-4 md:h-[600px] md:grid-cols-12 md:grid-rows-2">
+          <div className="group relative col-span-1 aspect-4/3 overflow-hidden md:col-span-8 md:row-span-2 md:aspect-auto">
             <Image
               src={photo1}
               className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
@@ -37,7 +37,7 @@ export function PastEventsSection() {
               </div>
             </div>
           </div>
-          <div className="group relative col-span-4 row-span-1 overflow-hidden">
+          <div className="group relative col-span-1 aspect-16/9 overflow-hidden md:col-span-4 md:row-span-1 md:aspect-auto">
             <Image
               src={photo2}
               className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
@@ -45,7 +45,7 @@ export function PastEventsSection() {
               fill
             />
           </div>
-          <div className="group relative col-span-4 row-span-1 overflow-hidden">
+          <div className="group relative col-span-1 aspect-16/9 overflow-hidden md:col-span-4 md:row-span-1 md:aspect-auto">
             <Image
               src={photo3}
               className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"

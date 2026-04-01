@@ -38,13 +38,13 @@ export function SupportSection() {
             <span className="text-primary-container">Cosa portare</span> al
             workshop
           </h2>
-          <div className="mx-auto max-w-2xl text-white/40">
+          <div className="mx-auto max-w-4xl text-white/40">
+            Per seguire la masterclass (mattina) non è necessario nulla, porta
+            solo la tua curiosità e la voglia di imparare!{' '}
             <div className="text-white">
-              Per partecipare al workshop sono necessari alcuni requisiti,
-              elencati di seguito.
+              Per partecipare al workshop (pomeriggio) sono necessari alcuni
+              requisiti, elencati di seguito.
             </div>
-            Per seguire la masterclass non è necessario nulla, porta solo la tua
-            curiosità e la voglia di imparare!
           </div>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5">
