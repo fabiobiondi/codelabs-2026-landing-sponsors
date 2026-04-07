@@ -3,7 +3,7 @@ export const regionInfo: Record<
   {
     city: string
     date: string | null
-    url?: string
+    url?: string | null
     community: string
     logo?: string
   }
@@ -20,7 +20,7 @@ export const regionInfo: Record<
     city: 'Lecce',
     date: '2026-07-06',
     community: 'google group lecce',
-    url: 'https://gdg.community.dev/gdg-lecce/',
+    url: null, //'https://gdg.community.dev/gdg-lecce/',
     logo: '/images/communities/gdg-lecce.webp',
   },
   IT82: {
@@ -28,12 +28,12 @@ export const regionInfo: Record<
     date: null,
     community: 'google group catania',
     logo: '/images/communities/gdg-catania.png',
-    url: 'https://gdg.community.dev/gdg-catania/',
+    url: null, // 'https://gdg.community.dev/gdg-catania/',
   },
   IT25: {
     city: 'Milano',
-    date: null,
-    url: 'http:/www.google.com',
+    date: '2026-09-25',
+    url: null,
     community: 'google group milano',
     logo: '/images/communities/gdg-milano.png',
   },
