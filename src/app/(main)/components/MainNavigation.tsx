@@ -82,7 +82,7 @@ export function MainNavigation({ isAtTop }: { isAtTop?: boolean }) {
             navRefs.current[item.id] = el
           }}
           onClick={() => scrollToSection(item.id)}
-          className={`relative pb-1 transition-colors duration-300 ${
+          className={`relative cursor-pointer pb-1 transition-colors duration-300 ${
             currentActiveId === item.id
               ? 'text-primary-container'
               : 'text-white/60 hover:text-white'
