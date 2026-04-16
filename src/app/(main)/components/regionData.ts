@@ -18,7 +18,7 @@ export const regionInfo: Record<
   IT62: { city: 'Roma', date: null, community: 'google group roma' },
   IT75: {
     city: 'Lecce',
-    date: '2026-07-06',
+    date: '2026-06-06',
     community: 'google group lecce',
     url: null, //'https://gdg.community.dev/gdg-lecce/',
     logo: '/images/communities/gdg-lecce.webp',
