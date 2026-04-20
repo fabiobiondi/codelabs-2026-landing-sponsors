@@ -15,7 +15,13 @@ export const regionInfo: Record<
     logo: '/images/communities/confartigianato-vicenza.png',
     url: 'https://evento-2026-vicenza-conf.vercel.app/',
   },
-  IT62: { city: 'Roma', date: null, community: 'google group roma' },
+  IT52: {
+    city: 'Pisa',
+    date: '2026-04-18',
+    community: 'google group pisa',
+    logo: '/images/communities/logo-gdg-pisa.png',
+    url: 'https://devfest.gdgpisa.it/',
+  },
   IT75: {
     city: 'Lecce',
     date: '2026-06-06',
@@ -23,6 +29,7 @@ export const regionInfo: Record<
     url: null, //'https://gdg.community.dev/gdg-lecce/',
     logo: '/images/communities/gdg-lecce.webp',
   },
+  IT62: { city: 'Roma', date: null, community: 'google group roma' },
   IT82: {
     city: 'Catania',
     date: null,

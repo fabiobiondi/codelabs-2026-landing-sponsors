@@ -9,8 +9,8 @@ const highlightedRegions = new Set(Object.keys(regionInfo))
 const isPastDate = (dateStr: string | null) => {
   if (!dateStr) return false
   const eventDate = new Date(dateStr)
-  const today = new Date('2026-04-01') // April 1, 2026
-  return eventDate < today
+  const today = new Date('2026-04-20') // April 20, 2026
+  return eventDate <= today
 }
 
 const regions = [

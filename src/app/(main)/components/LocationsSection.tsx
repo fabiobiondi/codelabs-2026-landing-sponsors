@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import { regionInfo } from './regionData'
 
+const TODAY = new Date('2026-04-20')
 export function LocationsSection() {
   return (
     <section id="date" className="bg-surface-container-lowest py-32">
@@ -35,7 +36,7 @@ export function LocationsSection() {
                 </div>
                 <div className="mb-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:gap-0">
                   <h4 className="text-2xl font-bold">{event.city}</h4>
-                  <span className="border border-primary-container/20 bg-primary-container/10 px-4 py-2 font-headline text-lg font-bold text-white">
+                  <span className="font-headline text-2xl font-bold text-white">
                     {event.date
                       ? new Date(event.date)
                           .toLocaleDateString('it-IT', {
@@ -47,39 +48,49 @@ export function LocationsSection() {
                   </span>
                 </div>
                 <div className="mb-8 flex items-center gap-4">
-                  <p className="text-sm tracking-widest text-white/50 uppercase">
+                  <p className="text-sm tracking-widest text-white uppercase">
                     {event.community}
                   </p>
                 </div>
               </div>
 
-              {event.url && (
+              {event.url ? (
                 <a
                   href={
-                    event.date && new Date(event.date) < new Date()
+                    event.date && new Date(event.date) < TODAY
                       ? undefined
                       : event.url
                   }
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`inline-flex items-center gap-2 font-bold transition-colors ${
-                    event.date && new Date(event.date) < new Date()
+                    event.date && new Date(event.date) < TODAY
                       ? 'cursor-not-allowed text-white/20'
                       : 'hover:text-primary-container-light text-primary-container'
                   }`}
                   onClick={(e) => {
-                    if (event.date && new Date(event.date) < new Date()) {
+                    if (event.date && new Date(event.date) < TODAY) {
                       e.preventDefault()
                     }
                   }}
                 >
-                  {event.date && new Date(event.date) < new Date()
-                    ? 'TERMINATO'
-                    : 'BIGLIETTI'}
-                  <span className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
+                  {event.date && new Date(event.date) < TODAY ? (
+                    <span className="rounded-md bg-orange-500 px-3 py-1 text-sm font-bold text-white">
+                      TERMINATO
+                    </span>
+                  ) : (
+                    <>
+                      BIGLIETTI
+                      <span className="material-symbols-outlined text-sm">
+                        arrow_forward
+                      </span>
+                    </>
+                  )}
                 </a>
+              ) : (
+                <div className="inline-flex items-center gap-2 font-bold text-white/20">
+                  BIGLIETTI PROSSIMAMENTE
+                </div>
               )}
             </div>
           ))}
