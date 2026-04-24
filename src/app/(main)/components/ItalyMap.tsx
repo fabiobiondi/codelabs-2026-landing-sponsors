@@ -176,28 +176,19 @@ export function ItalyMap() {
 
             return (
               <g key={event.city}>
-                {!isPast && (
-                  <circle
-                    cx={event.x}
-                    cy={event.y}
-                    r={22}
-                    fill="rgba(255,0,255,0.25)"
-                    className="pointer-events-none animate-ping"
-                  />
-                )}
                 <circle
                   cx={event.x}
                   cy={event.y}
-                  r={12}
+                  r={18}
                   fill={fill}
-                  stroke="#ffffff"
+                  stroke="#d1d5db"
                   strokeWidth={2}
                   filter="url(#glow)"
                   className="pointer-events-none"
                 />
                 <text
                   x={event.x}
-                  y={event.y - 20}
+                  y={event.y - 28}
                   textAnchor="middle"
                   fill="#ffffff"
                   fontSize={22}

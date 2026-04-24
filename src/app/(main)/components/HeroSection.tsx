@@ -57,11 +57,12 @@ export function HeroSection() {
             <br />
             <span className="mt-8 block text-sm font-semibold">
               Organizzato da{' '}
-              <span className="text-primary-container">Fabio Biondi</span> e dai{' '}
+              <span className="text-primary-container">Fabio Biondi</span> , dai{' '}
               <span className="text-primary-container">
                 Google Developer Groups
               </span>{' '}
-              locali
+              locali e <span className="text-primary-container"></span> vari
+              partner
             </span>
           </p>
           <div className="mt-8 w-full">
