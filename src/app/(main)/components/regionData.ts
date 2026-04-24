@@ -31,7 +31,7 @@ export const regionInfo: EventData[] = [
     city: 'Lecce',
     date: '2026-06-06',
     community: 'google group lecce',
-    url: null,
+    url: 'https://gdg.community.dev/events/details/google-gdg-lecce-presents-agentic-apps-con-google-gemini-sdk-e-typescript/',
     logo: '/images/communities/gdg-lecce.webp',
     x: 825, // Brought in from 940 to fit the map edge
     y: 580,
@@ -52,6 +52,16 @@ export const regionInfo: EventData[] = [
     x: 540,
     y: 760,
   },
+
+  {
+    city: 'Milano',
+    date: '2026-09-25',
+    url: null,
+    community: 'google group milano',
+    logo: '/images/communities/gdg-milano.png',
+    x: 300,
+    y: 195,
+  },
   {
     city: 'Roma',
     date: null,
@@ -65,15 +75,5 @@ export const regionInfo: EventData[] = [
     community: 'google group napoli',
     x: 602,
     y: 540,
-  },
-
-  {
-    city: 'Milano',
-    date: '2026-09-25',
-    url: null,
-    community: 'google group milano',
-    logo: '/images/communities/gdg-milano.png',
-    x: 300,
-    y: 195,
   },
 ]

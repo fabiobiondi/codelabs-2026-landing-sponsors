@@ -17,83 +17,71 @@ export function LocationsSection() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {regionInfo.map((event, index) => (
-            <div
-              key={index}
-              className="group flex flex-col justify-between border border-white/10 bg-surface-container-low p-6 transition-all duration-300 hover:border-primary-container md:p-8"
-            >
-              <div>
-                <div className="mb-4 flex h-24">
-                  {event.logo && (
-                    <Image
-                      src={event.logo}
-                      alt={event.community}
-                      width={80}
-                      height={80}
-                      className="h-24 w-24 rounded-xl object-contain"
-                    />
-                  )}
-                </div>
-                <div className="mb-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:gap-0">
-                  <h4 className="text-2xl font-bold">{event.city}</h4>
-                  <span className="font-headline text-2xl font-bold text-white">
+          {regionInfo.map((event, index) => {
+            const isPast = event.date && new Date(event.date) < TODAY
+            return (
+              <div
+                key={index}
+                className="group flex flex-col justify-between border border-white/10 bg-surface-container-low p-6 transition-all duration-300 hover:border-primary-container md:p-8"
+              >
+                <div>
+                  <p className="mb-2 font-headline text-2xl font-bold text-primary-container">
                     {event.date
-                      ? new Date(event.date)
-                          .toLocaleDateString('it-IT', {
-                            day: 'numeric',
-                            month: 'short',
-                          })
-                          .toUpperCase()
+                      ? new Date(event.date).toLocaleDateString('it-IT', {
+                          day: 'numeric',
+                          month: 'long',
+                        })
                       : 'COMING SOON'}
-                  </span>
-                </div>
-                <div className="mb-8 flex items-center gap-4">
-                  <p className="text-sm tracking-widest text-white uppercase">
-                    {event.community}
                   </p>
-                </div>
-              </div>
+                  <h4 className="mb-6 text-4xl font-bold">{event.city}</h4>
 
-              {event.url ? (
-                <a
-                  href={
-                    event.date && new Date(event.date) < TODAY
-                      ? undefined
-                      : event.url
-                  }
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`inline-flex items-center gap-2 font-bold transition-colors ${
-                    event.date && new Date(event.date) < TODAY
-                      ? 'cursor-not-allowed text-white/20'
-                      : 'hover:text-primary-container-light text-primary-container'
-                  }`}
-                  onClick={(e) => {
-                    if (event.date && new Date(event.date) < TODAY) {
-                      e.preventDefault()
-                    }
-                  }}
-                >
-                  {event.date && new Date(event.date) < TODAY ? (
-                    <span className="rounded-md bg-orange-500 px-3 py-1 text-sm font-bold text-white">
+                  <div className="my-6 h-px w-full bg-white/10" />
+
+                  <p className="mb-3 text-xs tracking-widest text-white/50 uppercase">
+                    In collaborazione con:
+                  </p>
+                  <div className="mb-8 flex items-center justify-between gap-4">
+                    <p className="text-sm font-semibold tracking-wide text-white uppercase">
+                      {event.community}
+                    </p>
+                    {event.logo && (
+                      <Image
+                        src={event.logo}
+                        alt={event.community}
+                        width={64}
+                        height={64}
+                        className="h-16 w-16 shrink-0 rounded-xl object-contain"
+                      />
+                    )}
+                  </div>
+                </div>
+
+                {event.url ? (
+                  isPast ? (
+                    <span className="inline-flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-md bg-white/5 px-6 py-3 font-bold text-white/30">
                       TERMINATO
                     </span>
                   ) : (
-                    <>
+                    <a
+                      href={event.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary-container px-6 py-3 font-bold text-black shadow-lg shadow-primary-container/30 transition-all hover:bg-primary-container-light hover:shadow-primary-container/50"
+                    >
                       BIGLIETTI
-                      <span className="material-symbols-outlined text-sm">
+                      <span className="material-symbols-outlined text-base">
                         arrow_forward
                       </span>
-                    </>
-                  )}
-                </a>
-              ) : (
-                <div className="inline-flex items-center gap-2 font-bold text-white/20">
-                  BIGLIETTI PROSSIMAMENTE
-                </div>
-              )}
-            </div>
-          ))}
+                    </a>
+                  )
+                ) : (
+                  <span className="inline-flex w-full cursor-not-allowed items-center justify-center gap-2 rounded-md bg-white/5 px-6 py-3 font-bold text-white/30">
+                    BIGLIETTI PROSSIMAMENTE
+                  </span>
+                )}
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
