@@ -4,8 +4,6 @@ import { useCallback, useRef, useState } from 'react'
 
 import { regionInfo } from './regionData'
 
-const highlightedRegions = new Set(Object.keys(regionInfo))
-
 const isPastDate = (dateStr: string | null) => {
   if (!dateStr) return false
   const eventDate = new Date(dateStr)
@@ -132,39 +130,6 @@ export function ItalyMap() {
     setVisible(false)
   }, [])
 
-  const handleMouseEnter = (e: React.MouseEvent<SVGPathElement>, region: typeof regions[number]) => {
-    const info = regionInfo[region.id]
-    if (!info) return
-    const formattedDate = info.date
-      ? new Date(info.date).toLocaleDateString('it-IT', {
-          day: '2-digit',
-          month: '2-digit',
-        })
-      : 'PRESTO DISPONIBILE'
-    showTooltip(info.city, formattedDate, e.clientX, e.clientY)
-  }
-
-  const handleMouseMove = (e: React.MouseEvent<SVGPathElement>) => {
-    if (!visible) return
-    setTooltipPos({ x: e.clientX, y: e.clientY })
-  }
-
-  const handleMouseLeave = () => {
-    hideTooltip()
-  }
-
-  const handleClick = (e: React.MouseEvent<SVGPathElement>, region: typeof regions[number]) => {
-    const info = regionInfo[region.id]
-    if (!info) return
-    const formattedDate = info.date
-      ? new Date(info.date).toLocaleDateString('it-IT', {
-          day: '2-digit',
-          month: '2-digit',
-        })
-      : 'PRESTO DISPONIBILE'
-    showTooltip(info.city, formattedDate, e.clientX, e.clientY)
-  }
-
   return (
     <div className="relative h-full w-full">
       <svg
@@ -187,27 +152,93 @@ export function ItalyMap() {
           stroke="rgba(255,255,255,0.2)"
           strokeWidth="1"
         >
-          {regions.map((region) => {
-            const hasEvent = highlightedRegions.has(region.id)
-            const info = regionInfo[region.id]
-            const isPast = info ? isPastDate(info.date) : false
+          {regions.map((region) => (
+            <path
+              key={region.id}
+              d={region.d}
+              fill="#ffffff"
+              stroke="rgba(255,255,255,0.2)"
+              className="transition-colors duration-300"
+            />
+          ))}
+        </g>
+
+        <g>
+          {regionInfo.map((event) => {
+            const isPast = isPastDate(event.date)
+            const formattedDate = event.date
+              ? new Date(event.date).toLocaleDateString('it-IT', {
+                  day: '2-digit',
+                  month: '2-digit',
+                })
+              : 'PRESTO DISPONIBILE'
+            const fill = isPast ? '#6b7280' : '#FF00FF'
 
             return (
-              <path
-                key={region.id}
-                d={region.d}
-                fill={hasEvent ? (isPast ? '#9ca3af' : 'rgba(255,0,255,0.7)') : '#ffffff'}
-                stroke={hasEvent ? (isPast ? '#6b7280' : 'rgba(255,0,255,0.9)') : 'rgba(255,255,255,0.2)'}
-                className={
-                  hasEvent
-                    ? 'cursor-pointer transition-colors duration-300'
-                    : 'transition-colors duration-300'
-                }
-                onMouseEnter={(e) => hasEvent && handleMouseEnter(e, region)}
-                onMouseMove={hasEvent ? handleMouseMove : undefined}
-                onMouseLeave={hasEvent ? handleMouseLeave : undefined}
-                onClick={(e) => hasEvent && handleClick(e, region)}
-              />
+              <g key={event.city}>
+                {!isPast && (
+                  <circle
+                    cx={event.x}
+                    cy={event.y}
+                    r={22}
+                    fill="rgba(255,0,255,0.25)"
+                    className="pointer-events-none animate-ping"
+                  />
+                )}
+                <circle
+                  cx={event.x}
+                  cy={event.y}
+                  r={12}
+                  fill={fill}
+                  stroke="#ffffff"
+                  strokeWidth={2}
+                  filter="url(#glow)"
+                  className="pointer-events-none"
+                />
+                <text
+                  x={event.x}
+                  y={event.y - 20}
+                  textAnchor="middle"
+                  fill="#ffffff"
+                  fontSize={22}
+                  fontWeight="bold"
+                  className="pointer-events-none select-none"
+                  style={{
+                    textShadow: '0 0 6px rgba(0,0,0,0.9), 0 0 12px rgba(0,0,0,0.7)',
+                  }}
+                >
+                  {event.city}
+                </text>
+                <circle
+                  cx={event.x}
+                  cy={event.y}
+                  r={32}
+                  fill="transparent"
+                  className="cursor-pointer"
+                  onMouseEnter={(e) =>
+                    showTooltip(event.city, formattedDate, e.clientX, e.clientY)
+                  }
+                  onMouseMove={(e) =>
+                    setTooltipPos({ x: e.clientX, y: e.clientY })
+                  }
+                  onMouseLeave={hideTooltip}
+                />
+                <rect
+                  x={event.x - 60}
+                  y={event.y - 36}
+                  width={120}
+                  height={24}
+                  fill="transparent"
+                  className="cursor-pointer"
+                  onMouseEnter={(e) =>
+                    showTooltip(event.city, formattedDate, e.clientX, e.clientY)
+                  }
+                  onMouseMove={(e) =>
+                    setTooltipPos({ x: e.clientX, y: e.clientY })
+                  }
+                  onMouseLeave={hideTooltip}
+                />
+              </g>
             )
           })}
         </g>

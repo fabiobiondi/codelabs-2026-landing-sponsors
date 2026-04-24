@@ -1,48 +1,79 @@
-export const regionInfo: Record<
-  string,
+export interface EventData {
+  city: string
+  date: string | null
+  url?: string | null
+  community: string
+  logo?: string
+  x: number
+  y: number
+}
+
+export const regionInfo: EventData[] = [
   {
-    city: string
-    date: string | null
-    url?: string | null
-    community: string
-    logo?: string
-  }
-> = {
-  IT34: {
     city: 'Vicenza',
     date: '2026-01-23',
     community: 'Confartigianato',
     logo: '/images/communities/confartigianato-vicenza.png',
     url: 'https://evento-2026-vicenza-conf.vercel.app/',
+    x: 425, // Slightly left of previous to hit the marker
+    y: 195, // Lowered to align with the dot
   },
-  IT52: {
+  {
     city: 'Pisa',
     date: '2026-04-18',
     community: 'google group pisa',
     logo: '/images/communities/logo-gdg-pisa.png',
     url: 'https://devfest.gdgpisa.it/',
+    x: 370,
+    y: 310,
   },
-  IT75: {
+  {
     city: 'Lecce',
     date: '2026-06-06',
     community: 'google group lecce',
-    url: null, //'https://gdg.community.dev/gdg-lecce/',
+    url: null,
     logo: '/images/communities/gdg-lecce.webp',
+    x: 825, // Brought in from 940 to fit the map edge
+    y: 580,
   },
-  IT62: { city: 'Roma', date: null, community: 'google group roma' },
-  IT82: {
+  {
     city: 'Catania',
-    date: null,
+    date: '2026-07-10',
     community: 'google group catania',
     logo: '/images/communities/gdg-catania.png',
-    url: null, // 'https://gdg.community.dev/gdg-catania/',
+    url: null,
+    x: 645, // Moved left to stay on Sicily
+    y: 800,
   },
-  IT25: {
+  {
+    city: 'Palermo',
+    date: '2026-07-24',
+    community: 'google group palermo',
+    x: 540,
+    y: 760,
+  },
+  {
+    city: 'Roma',
+    date: null,
+    community: 'google group roma',
+    x: 500,
+    y: 480,
+  },
+  {
+    city: 'Napoli',
+    date: null,
+    community: 'google group napoli',
+    x: 602,
+    y: 540,
+  },
+
+  {
     city: 'Milano',
     date: '2026-09-25',
     url: null,
     community: 'google group milano',
     logo: '/images/communities/gdg-milano.png',
+    x: 300,
+    y: 195,
   },
-  IT72: { city: 'Napoli', date: null, community: 'google group napoli' },
-}
+]

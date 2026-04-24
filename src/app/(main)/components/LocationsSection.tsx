@@ -17,9 +17,9 @@ export function LocationsSection() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {Object.entries(regionInfo).map(([id, event]) => (
+          {regionInfo.map((event, index) => (
             <div
-              key={id}
+              key={index}
               className="group flex flex-col justify-between border border-white/10 bg-surface-container-low p-6 transition-all duration-300 hover:border-primary-container md:p-8"
             >
               <div>

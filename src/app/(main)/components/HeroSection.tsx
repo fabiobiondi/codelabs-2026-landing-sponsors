@@ -3,7 +3,7 @@
 import { ItalyMap } from './ItalyMap'
 import { regionInfo } from './regionData'
 
-const tourDates = Object.values(regionInfo)
+const tourDates = regionInfo
 
 export function HeroSection() {
   const scrollToSection = (id: string) => {
