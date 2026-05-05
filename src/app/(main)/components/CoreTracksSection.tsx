@@ -15,12 +15,12 @@ export function CoreTracksSection() {
         </div>
         <div className="grid gap-px overflow-hidden border border-white/5 bg-white/5 md:grid-cols-2">
           {/* Masterclass */}
-          <div className="group bg-black p-6 transition-all duration-500 hover:bg-surface-container-low md:p-12">
+          <div className="group bg-black p-6 transition-all duration-500 md:p-12">
             <div className="mb-8 flex items-start justify-between">
               <span className="material-symbols-outlined text-5xl font-light text-primary-container">
                 school
               </span>
-              <span className="border border-white/10 px-3 py-1 font-mono text-xs text-white/30">
+              <span className="border border-white/10 px-3 py-1 font-mono text-xs">
                 10:00 - 13:00
               </span>
             </div>
@@ -78,12 +78,12 @@ export function CoreTracksSection() {
             </ul>
           </div>
           {/* Workshop */}
-          <div className="group bg-black p-6 transition-all duration-500 hover:bg-surface-container-low md:p-12">
+          <div className="group bg-black p-6 transition-all duration-500 md:p-12">
             <div className="mb-8 flex items-start justify-between">
               <span className="material-symbols-outlined text-5xl font-light text-primary-container">
                 terminal
               </span>
-              <span className="border border-white/10 px-3 py-1 font-mono text-xs text-white/30">
+              <span className="border border-white/10 px-3 py-1 font-mono text-xs">
                 14:30 - 18:00
               </span>
             </div>
@@ -98,23 +98,28 @@ export function CoreTracksSection() {
               <li className="flex gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-primary-container" />
                 <span>
-                  Utilizzerai <span className="font-bold">AntiGravity</span> e/o{' '}
-                  <span className="font-bold">Gemini CLI</span>
+                  Utilizzerai{' '}
+                  <span className="font-bold text-primary">AntiGravity</span>{' '}
+                  e/o <span className="font-bold text-primary">Gemini CLI</span>
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-primary-container" />
                 <span>
                   Inizierai a creare le prime semplici applicazioni
-                  &quot;intelligenti&quot; in TypeScript / NodeJS che integrano
-                  funzionalità AI con le API di Gemini
+                  &quot;intelligenti&quot; in{' '}
+                  <span className="font-bold text-primary">TypeScript</span> /{' '}
+                  <span className="font-bold text-primary">NodeJS</span> che
+                  integrano funzionalità AI con le{' '}
+                  <span className="font-bold text-primary">API di Gemini</span>
                 </span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-primary-container" />
                 <span>
-                  Imparerai a configurare e utilizzare l'SDK di Gemini: generare
-                  contenuti, streaming, output strutturati, ChatBot,
+                  Imparerai a configurare e utilizzare l'
+                  <span className="font-bold text-primary">SDK di Gemini</span>:
+                  generare contenuti, streaming, output strutturati, ChatBot,
                   Interactions API, Grounding Tools e molto altro.
                 </span>
               </li>
@@ -122,16 +127,28 @@ export function CoreTracksSection() {
               <li className="flex gap-3">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-primary-container" />
                 <span>
-                  Utilizzerai NodeJS per creare delle API REST in NodeJS che
-                  integrano funzionalità AI con Gemini SDK
+                  Utilizzerai{' '}
+                  <span className="font-bold text-primary">NodeJS</span> per
+                  creare delle{' '}
+                  <span className="font-bold text-primary">
+                    API REST in NodeJS
+                  </span>{' '}
+                  che integrano funzionalità AI con Gemini SDK
                 </span>
               </li>
 
               <li className="flex gap-3">
-                <span className="bg-primary-contawiner mt-1.5 h-1.5 w-1.5 shrink-0" />
+                <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-primary-container" />
                 <span>
                   Effettuerai il deploy su{' '}
-                  <span className="font-bold">Google Cloud</span>.
+                  <span className="font-bold">
+                    Google Cloud Platform utilizzando{' '}
+                    <span className="font-bold text-primary">
+                      Google Cloud Shell
+                    </span>{' '}
+                    e <span className="font-bold text-primary">Cloud Run</span>
+                  </span>
+                  .
                 </span>
               </li>
             </ul>
