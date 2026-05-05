@@ -29,7 +29,7 @@ export default function MainLayout({
       <footer className="w-full border-t border-[#FF00FF]/10 bg-surface-container-lowest font-body text-sm tracking-wide">
         <div className="mx-auto flex w-full max-w-[1440px] flex-col items-center justify-between gap-8 px-4 py-16 md:flex-row md:px-12">
           <div className="text-lg font-black text-white/50">
-            Gemini CodeLabs #1
+            Gemini CodeLabs Tour 2026
             <br />
             <span className="font-normal">Fabio Biondi</span>
           </div>

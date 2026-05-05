@@ -44,7 +44,7 @@ export function TopNavBar() {
             isAtTop ? 'text-primary-container' : 'text-white'
           }`}
         >
-          Gemini CodeLabs #1
+          Gemini CodeLabs Tour 2026
         </button>
         <MainNavigation isAtTop={isAtTop} />
         <div className="flex hidden items-center gap-4 sm:block">

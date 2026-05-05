@@ -204,7 +204,6 @@ export function ItalyMap() {
                   cx={event.x}
                   cy={event.y}
                   r={32}
-                  fill="transparent"
                   className="cursor-pointer"
                   onMouseEnter={(e) =>
                     showTooltip(event.city, formattedDate, e.clientX, e.clientY)
@@ -213,13 +212,18 @@ export function ItalyMap() {
                     setTooltipPos({ x: e.clientX, y: e.clientY })
                   }
                   onMouseLeave={hideTooltip}
+                  onClick={() => {
+                    document
+                      .getElementById('date')
+                      ?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  fill="transparent"
                 />
                 <rect
                   x={event.x - 60}
                   y={event.y - 36}
                   width={120}
                   height={24}
-                  fill="transparent"
                   className="cursor-pointer"
                   onMouseEnter={(e) =>
                     showTooltip(event.city, formattedDate, e.clientX, e.clientY)
@@ -228,6 +232,12 @@ export function ItalyMap() {
                     setTooltipPos({ x: e.clientX, y: e.clientY })
                   }
                   onMouseLeave={hideTooltip}
+                  onClick={() => {
+                    document
+                      .getElementById('date')
+                      ?.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  fill="transparent"
                 />
               </g>
             )
