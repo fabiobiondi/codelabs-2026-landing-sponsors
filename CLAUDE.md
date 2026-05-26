@@ -16,6 +16,8 @@ A detailed JSON project map is available at `.promptops/project-context.json` â€
 ## Directory Structure
 ```
 _assets/
+  banner/
+    ... (3 more files)
   favicon/
     favicon_io/
       ... (7 more files)
@@ -58,6 +60,7 @@ src/
     ... (2 more files)
   styles/
     ... (1 more files)
+CLAUDE.md
 next.config.js
 package.json
 postcss.config.js
@@ -72,10 +75,13 @@ tsconfig.json
 
 ## Recently Changed Files
 These files were modified in recent commits â€” likely relevant to current work:
+- `.claude/shared-context.md`
 - `.gitignore`
+- `CLAUDE.md`
+- `src/app/(main)/components/CoreTracksSection.tsx`
 - `src/app/(main)/components/HeroSection.tsx`
 - `src/app/(main)/components/ItalyMap.tsx`
-- `src/app/(main)/components/LocationsSection.tsx`
-- `src/app/(main)/components/regionData.ts`
+- `src/app/(main)/components/TopNavBar.tsx`
+- `src/app/(main)/layout.tsx`
 
 <!-- /PROMPTOPS:CONTEXT -->

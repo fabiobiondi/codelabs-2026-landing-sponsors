@@ -38,7 +38,7 @@ export const regionInfo: EventData[] = [
   },
   {
     city: 'Catania',
-    date: '2026-07-10',
+    date: '2026-07-11',
     community: 'google group catania',
     logo: '/images/communities/gdg-catania.png',
     url: null,
