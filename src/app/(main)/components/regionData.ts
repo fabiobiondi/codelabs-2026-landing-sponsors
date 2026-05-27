@@ -1,6 +1,7 @@
 export interface EventData {
   city: string
   date: string | null
+  dayOfWeek?: string
   url?: string | null
   community: string
   logo?: string
@@ -12,6 +13,7 @@ export const regionInfo: EventData[] = [
   {
     city: 'Vicenza',
     date: '2026-01-23',
+    dayOfWeek: 'Venerdì',
     community: 'Confartigianato',
     logo: '/images/communities/confartigianato-vicenza.png',
     url: 'https://evento-2026-vicenza-conf.vercel.app/',
@@ -21,6 +23,7 @@ export const regionInfo: EventData[] = [
   {
     city: 'Pisa',
     date: '2026-04-18',
+    dayOfWeek: 'Sabato',
     community: 'google group pisa',
     logo: '/images/communities/logo-gdg-pisa.png',
     url: 'https://devfest.gdgpisa.it/',
@@ -30,6 +33,7 @@ export const regionInfo: EventData[] = [
   {
     city: 'Lecce',
     date: '2026-06-06',
+    dayOfWeek: 'Sabato',
     community: 'google group lecce',
     url: 'https://gdg.community.dev/events/details/google-gdg-lecce-presents-agentic-apps-con-google-gemini-sdk-e-typescript/',
     logo: '/images/communities/gdg-lecce.webp',
@@ -39,6 +43,7 @@ export const regionInfo: EventData[] = [
   {
     city: 'Catania',
     date: '2026-07-11',
+    dayOfWeek: 'Sabato',
     community: 'google group catania',
     logo: '/images/communities/gdg-catania.png',
     url: null,
@@ -48,6 +53,7 @@ export const regionInfo: EventData[] = [
   {
     city: 'Palermo',
     date: '2026-07-24',
+    dayOfWeek: 'Venerdì',
     community: 'google group palermo',
     x: 540,
     y: 760,
@@ -56,6 +62,7 @@ export const regionInfo: EventData[] = [
   {
     city: 'Milano',
     date: '2026-09-25',
+    dayOfWeek: '',
     url: null,
     community: 'google group milano',
     logo: '/images/communities/gdg-milano.png',

@@ -167,10 +167,10 @@ export function ItalyMap() {
           {regionInfo.map((event) => {
             const isPast = isPastDate(event.date)
             const formattedDate = event.date
-              ? new Date(event.date).toLocaleDateString('it-IT', {
+              ? `${event.dayOfWeek ? event.dayOfWeek + ' ' : ''}${new Date(event.date).toLocaleDateString('it-IT', {
                   day: '2-digit',
                   month: '2-digit',
-                })
+                })}`
               : 'PRESTO DISPONIBILE'
             const fill = isPast ? '#6b7280' : '#FF00FF'
 

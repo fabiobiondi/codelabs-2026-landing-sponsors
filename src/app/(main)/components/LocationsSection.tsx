@@ -27,10 +27,10 @@ export function LocationsSection() {
                 <div>
                   <p className="mb-2 font-headline text-2xl font-bold text-primary-container">
                     {event.date
-                      ? new Date(event.date).toLocaleDateString('it-IT', {
+                      ? `${event.dayOfWeek ? event.dayOfWeek + ' ' : ''}${new Date(event.date).toLocaleDateString('it-IT', {
                           day: 'numeric',
                           month: 'long',
-                        })
+                        })}`
                       : 'COMING SOON'}
                   </p>
                   <h4 className="mb-6 text-4xl font-bold">{event.city}</h4>
