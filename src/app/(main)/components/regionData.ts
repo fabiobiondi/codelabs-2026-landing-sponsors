@@ -45,7 +45,7 @@ export const regionInfo: EventData[] = [
     date: '2026-07-11',
     dayOfWeek: 'Sabato',
     community: 'google group catania',
-    logo: '/images/communities/gdg-catania.png',
+    logo: '/images/communities/gdg_catania.png',
     url: null,
     x: 645, // Moved left to stay on Sicily
     y: 800,
