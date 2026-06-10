@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import { regionInfo } from './regionData'
 
-const TODAY = new Date('2026-04-20')
+const TODAY = new Date()
 export function LocationsSection() {
   return (
     <section id="date" className="bg-surface-container-lowest py-32">

@@ -7,7 +7,7 @@ import { regionInfo } from './regionData'
 const isPastDate = (dateStr: string | null) => {
   if (!dateStr) return false
   const eventDate = new Date(dateStr)
-  const today = new Date('2026-04-20') // April 20, 2026
+  const today = new Date()
   return eventDate <= today
 }
 

@@ -17,7 +17,7 @@ A detailed JSON project map is available at `.promptops/project-context.json` â€
 ```
 _assets/
   banner/
-    ... (3 more files)
+    ... (6 more files)
   favicon/
     favicon_io/
       ... (7 more files)
@@ -27,6 +27,7 @@ _assets/
       ... (3 more files)
     pisa/
       ... (1 more files)
+    ... (2 more files)
   stitch_sito_black/
     ... (3 more files)
   ... (4 more files)
@@ -76,12 +77,19 @@ tsconfig.json
 ## Recently Changed Files
 These files were modified in recent commits â€” likely relevant to current work:
 - `.claude/shared-context.md`
-- `.gitignore`
 - `CLAUDE.md`
-- `src/app/(main)/components/CoreTracksSection.tsx`
-- `src/app/(main)/components/HeroSection.tsx`
+- `_assets/banner/_banners-event_codelab.afdesign`
+- `_assets/banner/codelab-gemini-banner-catania-2.png`
+- `_assets/banner/codelab-gemini-banner-catania-3.png`
+- `_assets/banner/codelab-gemini-banner-catania1.png`
+- `_assets/banner/codelab-gemini-banner-newsletter.png`
+- `_assets/banner/codelab-gemini.png`
+- `_assets/gdg/gdg_catania.png`
+- `_assets/gdg/gdg_catania.svg`
+- `public/images/communities/gdg-catania.png`
+- `public/images/communities/gdg_catania.png`
 - `src/app/(main)/components/ItalyMap.tsx`
-- `src/app/(main)/components/TopNavBar.tsx`
-- `src/app/(main)/layout.tsx`
+- `src/app/(main)/components/LocationsSection.tsx`
+- `src/app/(main)/components/regionData.ts`
 
 <!-- /PROMPTOPS:CONTEXT -->
