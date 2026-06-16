@@ -46,7 +46,7 @@ export const regionInfo: EventData[] = [
     dayOfWeek: 'Sabato',
     community: 'google group catania',
     logo: '/images/communities/gdg_catania.png',
-    url: null,
+    url: 'https://gdg.community.dev/events/details/google-gdg-catania-presents-agentic-apps-con-google-gemini-sdk-e-typescript/',
     x: 645, // Moved left to stay on Sicily
     y: 800,
   },
