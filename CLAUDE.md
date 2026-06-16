@@ -55,6 +55,7 @@ src/
       sicily/
       ... (15 more files)
     photo-gallery/
+      lecce-2026/
       pisa-2026/
       sicily-2025/
       vicenza-2026/
@@ -82,14 +83,14 @@ These files were modified in recent commits — likely relevant to current work:
 - `_assets/banner/codelab-gemini-banner-catania-2.png`
 - `_assets/banner/codelab-gemini-banner-catania-3.png`
 - `_assets/banner/codelab-gemini-banner-catania1.png`
-- `_assets/banner/codelab-gemini-banner-newsletter.png`
-- `_assets/banner/codelab-gemini.png`
 - `_assets/gdg/gdg_catania.png`
 - `_assets/gdg/gdg_catania.svg`
 - `public/images/communities/gdg-catania.png`
 - `public/images/communities/gdg_catania.png`
 - `src/app/(main)/components/ItalyMap.tsx`
 - `src/app/(main)/components/LocationsSection.tsx`
+- `src/app/(main)/components/PastEventsSection.tsx`
 - `src/app/(main)/components/regionData.ts`
+- `src/images/photo-gallery/lecce-2026/IMG_7439.jpeg`
 
 <!-- /PROMPTOPS:CONTEXT -->
