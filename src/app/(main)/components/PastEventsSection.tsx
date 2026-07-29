@@ -1,5 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
+import palermo1 from '@/images/photo-gallery/palermo2026/IMG_8300.jpg'
+import palermo2 from '@/images/photo-gallery/palermo2026/IMG_8305.jpg'
+import palermo3 from '@/images/photo-gallery/palermo2026/IMG_8307.jpg'
+import catania1 from '@/images/photo-gallery/catania-2025/IMG_7806.jpg'
+import catania2 from '@/images/photo-gallery/catania-2025/IMG_7820.jpg'
+import catania3 from '@/images/photo-gallery/catania-2025/IMG_7824.jpg'
 import photo1 from '@/images/photo-gallery/vicenza-2026/1769162460239.jpg'
 import photo2 from '@/images/photo-gallery/vicenza-2026/IMG_6299.jpg'
 import photo3 from '@/images/photo-gallery/vicenza-2026/IMG_6305.jpg'
@@ -19,6 +25,90 @@ export function PastEventsSection() {
           </h2>
         </div>
         
+        <div className="my-16 flex items-center justify-between">
+          <span className="font-mono tracking-tighter text-primary-container">
+            PALERMO 2026 // LUGLIO
+          </span>
+        </div>
+        <div className="grid grid-cols-1 gap-4 md:h-[600px] md:grid-cols-12 md:grid-rows-2">
+          <div className="group relative col-span-1 aspect-4/3 overflow-hidden md:col-span-8 md:row-span-2 md:aspect-auto">
+            <Image
+              src={palermo1}
+              className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              alt="Pubblico e relatore durante la masterclass a Palermo"
+              fill
+            />
+            <div className="absolute inset-0 flex items-end bg-linear-to-t from-black/80 to-transparent p-4 md:p-8">
+              <div>
+                <p className="font-bold text-primary">
+                  Palermo | Product Heroes + Elca + GDG Palermo
+                </p>
+                <p className="text-sm text-white/60">
+                  Masterclass + Workshop
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="group relative col-span-1 aspect-16/9 overflow-hidden md:col-span-4 md:row-span-1 md:aspect-auto">
+            <Image
+              src={palermo2}
+              className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              alt="Partecipanti al lavoro sui laptop durante il workshop di Palermo"
+              fill
+            />
+          </div>
+          <div className="group relative col-span-1 aspect-16/9 overflow-hidden md:col-span-4 md:row-span-1 md:aspect-auto">
+            <Image
+              src={palermo3}
+              className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              alt="Sviluppatore al lavoro sul proprio laptop durante il workshop di Palermo"
+              fill
+            />
+          </div>
+        </div>
+
+        <div className="my-16 flex items-center justify-between">
+          <span className="font-mono tracking-tighter text-primary-container">
+            CATANIA 2026 // LUGLIO
+          </span>
+        </div>
+        <div className="grid grid-cols-1 gap-4 md:h-[600px] md:grid-cols-12 md:grid-rows-2">
+          <div className="group relative col-span-1 aspect-4/3 overflow-hidden md:col-span-8 md:row-span-2 md:aspect-auto">
+            <Image
+              src={catania1}
+              className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              alt="Pubblico che segue la masterclass a Catania con laptop e tablet in primo piano"
+              fill
+            />
+            <div className="absolute inset-0 flex items-end bg-linear-to-t from-black/80 to-transparent p-4 md:p-8">
+              <div>
+                <p className="font-bold text-primary">
+                  Catania | GDG Catania
+                </p>
+                <p className="text-sm text-white/60">
+                  Masterclass + Workshop
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="group relative col-span-1 aspect-16/9 overflow-hidden md:col-span-4 md:row-span-1 md:aspect-auto">
+            <Image
+              src={catania2}
+              className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              alt="Partecipanti al lavoro sui laptop durante il workshop di Catania"
+              fill
+            />
+          </div>
+          <div className="group relative col-span-1 aspect-16/9 overflow-hidden md:col-span-4 md:row-span-1 md:aspect-auto">
+            <Image
+              src={catania3}
+              className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              alt="Gruppo di partecipanti al lavoro insieme durante il workshop di Catania"
+              fill
+            />
+          </div>
+        </div>
+
         <div className="my-16 flex items-center justify-between">
           <span className="font-mono tracking-tighter text-primary-container">
             LECCE 2026 // GIUGNO
