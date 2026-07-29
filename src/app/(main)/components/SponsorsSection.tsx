@@ -32,7 +32,7 @@ export function SponsorsSection() {
       logo: ebav,
       url: 'https://www.ebav.it/',
     },
-    /*   {
+    {
       name: 'Edgemony',
       logo: edgemony,
       url: 'https://www.edgemony.com/',
@@ -41,7 +41,7 @@ export function SponsorsSection() {
       name: 'Elca',
       logo: elcaLogoNero,
       url: 'https://www.elca.ch/',
-    }, */
+    },
     {
       name: 'LearnByDo.ing',
       logo: learn,
