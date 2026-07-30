@@ -59,13 +59,21 @@ export const regionInfo: EventData[] = [
     x: 540,
     y: 760,
   },
+  {
+    city: 'Napoli',
+    date: '2026-09-18',
+    community: 'Google Group Napoli',
+    url: 'https://gdg.community.dev/events/details/google-gdg-napoli-presents-agentic-apps-con-google-gemini-sdk-e-typescript/',
+    x: 602,
+    y: 540,
+  },
 
   {
     city: 'Milano',
     date: '2026-09-25',
     dayOfWeek: '',
-    url: null,
-    community: 'google group milano',
+    url: 'https://gdg.community.dev/events/details/google-gdg-milano-presents-agentic-apps-con-google-gemini-sdk-e-typescript/',
+    community: 'Google Group Milano',
     logo: '/images/communities/gdg-milano.png',
     x: 300,
     y: 195,
@@ -77,11 +85,5 @@ export const regionInfo: EventData[] = [
     x: 500,
     y: 480,
   },
-  {
-    city: 'Napoli',
-    date: null,
-    community: 'google group napoli',
-    x: 602,
-    y: 540,
-  },
+
 ]
