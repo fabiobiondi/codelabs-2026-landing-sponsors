@@ -19,7 +19,8 @@ import pisa1 from '@/images/photo-gallery/pisa-2026/IMG_7065.jpg'
 import pisa2 from '@/images/photo-gallery/pisa-2026/IMG_7066.jpg'
 import pisa3 from '@/images/photo-gallery/pisa-2026/IMG_7099.jpg'
 import lecce1 from '@/images/photo-gallery/lecce-2026/IMG_7439.jpeg'
-import lecce2 from '@/images/photo-gallery/lecce-2026/_IMG_7445.jpeg'
+import lecce2 from '@/images/photo-gallery/lecce-2026/_IMG_7445.jpeg';
+
 
 export function PastEventsSection() {
   return (
