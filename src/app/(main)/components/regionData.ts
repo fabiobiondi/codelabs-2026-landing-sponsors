@@ -77,7 +77,7 @@ export const regionInfo: EventData[] = [
     logo: '/images/communities/gdg-milano.png',
     x: 300,
     y: 195,
-  },
+  }/* ,
   {
     city: 'Roma',
     date: null,
@@ -85,5 +85,5 @@ export const regionInfo: EventData[] = [
     x: 500,
     y: 480,
   },
-
+ */
 ]

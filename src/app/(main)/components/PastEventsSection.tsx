@@ -1,5 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
+import milano1 from '@/images/photo-gallery/milano-2026/photo_6_2026-10-12_17-05-03.jpg'
+import milano2 from '@/images/photo-gallery/milano-2026/IMG_9270.jpg'
+import milano3 from '@/images/photo-gallery/milano-2026/IMG_9264-1.jpg'
+import napoli1 from '@/images/photo-gallery/napoli-2026/PXL_20260918_082028395-1.jpg'
+import napoli2 from '@/images/photo-gallery/napoli-2026/IMG_9893_Original.jpg'
+import napoli3 from '@/images/photo-gallery/napoli-2026/IMG_9900_Original.jpg'
 import palermo1 from '@/images/photo-gallery/palermo2026/IMG_8300.jpg'
 import palermo2 from '@/images/photo-gallery/palermo2026/IMG_8305.jpg'
 import palermo3 from '@/images/photo-gallery/palermo2026/IMG_8307.jpg'
@@ -21,10 +27,94 @@ export function PastEventsSection() {
       <div className="mx-auto max-w-[1440px] px-4 md:px-12">
         <div className="mb-16 flex items-center justify-between">
           <h2 className="font-headline text-4xl font-bold tracking-tight">
-            Edizioni Precedenti
+            Photo Gallery
           </h2>
         </div>
-        
+
+        <div className="my-16 flex items-center justify-between">
+          <span className="font-mono tracking-tighter text-primary-container">
+            MILANO 2026 // SETTEMBRE
+          </span>
+        </div>
+        <div className="grid grid-cols-1 gap-4 md:h-[600px] md:grid-cols-12 md:grid-rows-2">
+          <div className="group relative col-span-1 aspect-4/3 overflow-hidden md:col-span-8 md:row-span-2 md:aspect-auto">
+            <Image
+              src={milano1}
+              className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              alt="Sala con i partecipanti al workshop di Milano"
+              fill
+            />
+            <div className="absolute inset-0 flex items-end bg-linear-to-t from-black/80 to-transparent p-4 md:p-8">
+              <div>
+                <p className="font-bold text-primary">
+                  Milano | GDG Milano
+                </p>
+                <p className="text-sm text-white/60">
+                  Masterclass + Workshop
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="group relative col-span-1 aspect-16/9 overflow-hidden md:col-span-4 md:row-span-1 md:aspect-auto">
+            <Image
+              src={milano2}
+              className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              alt="Fabio Biondi al workshop di Milano"
+              fill
+            />
+          </div>
+          <div className="group relative col-span-1 aspect-16/9 overflow-hidden md:col-span-4 md:row-span-1 md:aspect-auto">
+            <Image
+              src={milano3}
+              className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              alt="Desk con swag e materiali al workshop di Milano"
+              fill
+            />
+          </div>
+        </div>
+
+        <div className="my-16 flex items-center justify-between">
+          <span className="font-mono tracking-tighter text-primary-container">
+            NAPOLI 2026 // SETTEMBRE
+          </span>
+        </div>
+        <div className="grid grid-cols-1 gap-4 md:h-[600px] md:grid-cols-12 md:grid-rows-2">
+          <div className="group relative col-span-1 aspect-4/3 overflow-hidden md:col-span-8 md:row-span-2 md:aspect-auto">
+            <Image
+              src={napoli1}
+              className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              alt="Aula magna durante la masterclass a Napoli"
+              fill
+            />
+            <div className="absolute inset-0 flex items-end bg-linear-to-t from-black/80 to-transparent p-4 md:p-8">
+              <div>
+                <p className="font-bold text-primary">
+                  Napoli | GDG Napoli
+                </p>
+                <p className="text-sm text-white/60">
+                  Masterclass + Workshop
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="group relative col-span-1 aspect-16/9 overflow-hidden md:col-span-4 md:row-span-1 md:aspect-auto">
+            <Image
+              src={napoli2}
+              className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              alt="Partecipanti durante la sessione a Napoli"
+              fill
+            />
+          </div>
+          <div className="group relative col-span-1 aspect-16/9 overflow-hidden md:col-span-4 md:row-span-1 md:aspect-auto">
+            <Image
+              src={napoli3}
+              className="h-full w-full object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+              alt="Studenti e sviluppatori al codelab di Napoli"
+              fill
+            />
+          </div>
+        </div>
+
         <div className="my-16 flex items-center justify-between">
           <span className="font-mono tracking-tighter text-primary-container">
             PALERMO 2026 // LUGLIO
